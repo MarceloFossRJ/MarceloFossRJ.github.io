@@ -7,7 +7,7 @@ permalink: /about/
 My name is Marcelo Foss, aka marcelo.foss.rj or marcelofossrj; 
 A software creator and chemical engineer that likes to take pictures.
 
-I created the DevRecipes.blog to archive programming recipes, snippets, and cheat sheets that I use. Later I realized that would be a nice place to also my thoughts and convictions about the art of creating software.
+I created the DevRecipes.blog to archive programming recipes, snippets, reference cards and cheat sheets that I use. Later I realized that would be a nice place to also my thoughts and convictions about the art of creating software.
 
 I've been working in software development for a while, and touched many things in it.
 From software developer to IT Manager, from solution architect to hiring a distributed team, from leading international teams to designing data migrations.

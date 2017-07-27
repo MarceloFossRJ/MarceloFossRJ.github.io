@@ -1,7 +1,7 @@
 # MarceloFossRJ Blog
 This the repository for the [http://marcelofossrj.github.io]([http://marcelofossrj.github.io), owned by Marcelo Foss, aka marcelo.foss.rj or marcelofossrj: myself. 
 
-The DevRecipes.blog was created to archive programming recipes, snippets, and cheat sheets that I use. Later I realized that would be a nice place to also my thoughts and convictions about the art of creating software.
+The DevRecipes.blog was created to archive programming recipes, snippets, reference cards and cheat sheets that I use. Later I realized that would be a nice place to also my thoughts and convictions about the art of creating software.
 
 I've been working in software development for a while, and touched many things in it.
 From software developer to IT Manager, from solution architect to hiring a distributed team, from leading international teams to designing data migrations.
