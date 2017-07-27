@@ -27,24 +27,24 @@ $rvm install 1.9.3-p551           # Patchlevel 551
 
 To list all rubies and gemsets installed in your computer
 {% highlight ruby %}
-    $rvm list                   # List rubies only
-    $rvm list gemsets   # List rubies and gemsets
-    $rvm gemset list     # List gemsets for current ruby
+$rvm list                   # List rubies only
+$rvm list gemsets   # List rubies and gemsets
+$rvm gemset list     # List gemsets for current ruby
 {% endhighlight %}
 
 Selecting Ruby to work
 {% highlight ruby %}
-    $rvm use 2.3.3                    # For current session only
+$rvm use 2.3.3                    # For current session only
 {% endhighlight %}
 
 Defining the default version to use (you can refer to it as default)
 {% highlight ruby %}
-    $rvm 2.3.3 --default     
+$rvm 2.3.3 --default     
 {% endhighlight %}
 
 Using the default ruby version
 {% highlight ruby %}
-    $rvm use default 
+$rvm use default 
 {% endhighlight %}	
         
 ## Gemsets
@@ -57,17 +57,17 @@ During installation of Ruby, RVM creates two gemsets:
 
 To create a gemset:
 {% highlight ruby %}
-$ rvm gemset create gemset_name
+$rvm gemset create gemset_name
 {% endhighlight %}
 
 Using a gemset:
 {% highlight ruby %}
-$ rvm gemset_name
+$rvm gemset_name
 {% endhighlight %}
 or
 Gemsets can be specified together with ruby name using gemsets separator(@):
 {% highlight ruby %}
-$ rvm gemset version@gemset_name
+$rvm gemset version@gemset_name
 {% endhighlight %}
 or
 {% highlight ruby %}
@@ -76,7 +76,7 @@ $ruby-2.3.3@my-project
 
 To create a gemset and already use it:
 {% highlight ruby %}
-$ rvm --create use version@gemset_name
+$rvm --create use version@gemset_name
 {% endhighlight %}
 
 All gems that you install when using gemset will be confined to it.
@@ -84,28 +84,28 @@ In the list of gems will appear only the gems of the gemset and those of the glo
 
 If you want to install a new gem to the global gemset, use:
 {% highlight ruby %}
-$ rvm gemset use global
-$ gem install name_of_the_gem
+$rvm gemset use global
+$gem install name_of_the_gem
 {% endhighlight %}
 
 To see which gemset is being used:
 {% highlight ruby %}
-$ rvm gemset name
+$rvm gemset name
 {% endhighlight %}
 
 Listing all available gemsets for the version:
 {% highlight ruby %}
-$ rvm gemset list
+$rvm gemset list
 {% endhighlight %}
 
 Deleting a gemset and the gems contained in it (-force is not to ask for confirmation):
 {% highlight ruby %}
-$ rvm --force gemset delete gemset_name
+$rvm --force gemset delete gemset_name
 {% endhighlight %}
 
 Where are the gems installed? Type:
 {% highlight ruby %}
-$ gem env
+$gem env
 {% endhighlight %}
 
 That will result in something like:
@@ -167,8 +167,8 @@ $rvm uninstall ruby_version
 
 To delete a gemset:
 {% highlight ruby %}
-$ rvm gemset use gemset_name
-$ rvm gemset delete gemset_name
+$rvm gemset use gemset_name
+$rvm gemset delete gemset_name
 {% endhighlight %}
 
 Check the RVM website for a detailed (and good) documentation at [https://rvm.io/](https://rvm.io/)
