@@ -200,7 +200,8 @@
 }
 
 .page-heading {
-  @include relative-font-size(1.25);
+  @include relative-font-size(1.75);
+//  @include relative-font-size(1.25);
 }
 
 .post-list {

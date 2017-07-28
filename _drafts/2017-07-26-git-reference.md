@@ -1,28 +1,30 @@
 ---
 layout: post
 title:  "Git reference card"
-date:   2017-07-24 18:44:25 -0300
+date:   2017-07-26 18:44:25 -0300
 categories: [reference card]
 tags: [git, github]
 author: Marcelo Foss
 ---
-Git start from the concept that a file in a repository has 3 states:  
+Git starts from the concept that a repository is composed of 4 different "trees" or "spaces":  
+![Git workflow]({{ site.url }}/assets/images/git_1.png)
+* Working Directory: holds the actual files. 
+* Index: which acts as a staging area
+* Local repository or HEAD: which points to the last commit you've made.
+
+Additionally a file can have 3 states:
 * modified	
 * staged
 * committed
 
-Staging area ("cache") = index of what will go into your next commit  
-Staging files = adding snapshots of them to the staging area  
-Committing files = taking them as they are in the staging area, storing them permanently in Git compressed database in the Git directory.  
-
 ### Git basics
-Configuring your name and email address  
+#### Configuring your name and email address  
 {% highlight ruby %}
 $git config --global user.name "Your Name"
 $git config --global user.email you@example.com
 {% endhighlight %}
 
-#### Getting a Git repository  
+#### Creating a Git repository  
 To create and initialize the Git directory (.git) in the current folder:  
 {% highlight ruby %}
 $git init 
@@ -30,7 +32,7 @@ $git init
 
 To clone an existing repository:  
 {% highlight ruby %}
-$git clone git://github.com/fniessen/repo.git
+$git clone git://github.com/marcelofossrj/aca-rails.git
 {% endhighlight %}
 It pulls down every version of every file for the history of the project.  
 
@@ -47,30 +49,32 @@ Each file can be in one of two states:
 * Tracked
 * Untracked
 
-To check the status of your files
+#### Ignoring files
+Set up a .gitignore file, with glob patterns (simplified regular expressions)
+
+#### Tracking newly created files, or Staging modified files:
+To add a file to staging or index: 
+{% highlight ruby %}
+$git add <filepattern>
+$git add .
+$git add <filename>
+{% endhighlight %}
+
+#### Viewing your staged and unstaged changes
+
+####To check the status of your files
 {% highlight ruby %}
 $git status
 {% endhighlight %}
 
-#### Tracking newly created files, or Staging modified files
 
-Stage files (the version of the files as it is at that time you run the command) to the index:
-{% highlight ruby %}
-$git add <filepattern>
-{% endhighlight %}
-#### Ignoring files
-
-Set up a .gitignore file, with glob patterns (simplified regular expressions)
-
-#### Viewing your staged and unstaged changes
-
-See what you have changed but not yet staged:
+To see what you have changed but not yet staged:
 {% highlight ruby %}
 $git diff
 {% endhighlight %}
 doesn't show all the changes made since your last commit – only changes that are still unstaged.
 
-See what you have staged that will go into your next commit
+To see what you have staged that will go into your next commit
 {% highlight ruby %}
 $git diff --cached                     # --staged is a synonym
 {% endhighlight %}
@@ -82,6 +86,7 @@ Commit your staged changes:
 {% highlight ruby %}
 $git commit -m "My first commit!"
 {% endhighlight %}
+Now the file is committed to the HEAD, but not in your remote repository yet.
 
 Skipping the staging area
 {% highlight ruby %}
@@ -106,125 +111,131 @@ The backslash is necessary because Git does its own filename expansion in additi
 
 ### Moving files
 {% highlight ruby %}
-git mv
+$git mv
 {% endhighlight %}
 
 ### Viewing the commit history
 
 List the commits made in the repository
 {% highlight ruby %}
-git log
+$git log
 {% endhighlight %}
 
 Show the diff introduced in each commit
 {% highlight ruby %}
-git log -p
+$git log -p
 {% endhighlight %}
 
 #### Limiting log output
 
 Time-limiting options:
 {% highlight ruby %}
---since
+--since #after the specified date
 {% endhighlight %}
 
-after the specified date
 {% highlight ruby %}
---until
+--until #before the specified date
 {% endhighlight %}
-before the specified date
 
-Dates are absolute ("2008-01-15") or relative ("2 weeks").
+Dates can be absolute ("2008-01-15") or relative ("2 weeks").
 
-Search criteria:
+#### Search criteria:
 {% highlight ruby %}
 --author
 --committer
 {% endhighlight %}
 
-Grep option:
+#### Grep option:
+{% highlight ruby %}
+--grep #search for keywords in the commit messages
+--all-match #match commit with both author and grep options, for example
+{% endhighlight %}
 
---grep
-search for keywords in the commit messages
---all-match
-match commit with both author and grep options, for example
-(no term)
---pretty
-Undoing things
-
-XXX
-
-Changing your last commit
+### Undoing things
+#### Changing your last commit
 
 Fix the commit message:
+{% highlight ruby %}
+$git commit --amend
+{% endhighlight %}
 
-git commit --amend
-Unstaging a staged file
-
+#### Unstaging a staged file
 Change which commit the current branch is pointing to.
+{% highlight ruby %}
+$git reset HEAD <file>
+{% endhighlight %}
 
-git reset HEAD <file>
-Unmodifying a modified file
-
+#### Unmodifying a modified file
 Revert a file back to what it looked like when you last committed
+{% highlight ruby %}
+$git checkout -- <file>
+{% endhighlight %}
 
-git checkout -- <file>
-Working with remotes
+### Working with remotes
 
-Showing your remotes
-
+#### Showing your remotes
 Show the URL that Git has stored for the shortname to be expanded to:
-
-git remote -v
+{% highlight ruby %}
+$git remote -v
+{% endhighlight %}
 origin is the default shortname Git gives to the server (or repo) you clone from.
 
-Adding remote repositories
+#### Adding remote repositories
+{% highlight ruby %}
+$git remote add <shortname> <url>
+$git remote add origin https://github.com/MarceloFossRJ/aca-rails.git #git uses origin as default name for a remote	
+{% endhighlight %}	
 
-git remote add <shortname> <url>
-Fetching and pulling from your remotes
-
+#### Fetching and pulling from your remotes
 Pull down all the data from the remote project that you don't have yet in your repository (and update the remote refs):
-
-git fetch
+{% highlight ruby %}
+$git fetch
+{% endhighlight %}
 Git will not fetch data in your working directory (only in your Git directory) – you still have the files in your working directory. It fetches it in a separate (remote) branch: your master (or develop or whatever) branch is different from origin/master branch.
 
 Automatically fetch and then merge a remote branch into your current branch:
-
-git pull                                # It does commit!
+{% highlight ruby %}
+$git pull                                # It does commit!
+{% endhighlight %}
 It is actually a bad idea to do both at the same time: it is highly recommended to do manually a fetch and then do a merge, unless you're the only person working at that repository. If pull blows up on you, it's a little hard to get out of it.
 
-Pushing to your remotes
+#### Pushing to your remotes
 
 Push your master branch to your origin server:
-
-git push origin master
+{% highlight ruby %}
+$git push origin master
+{% endhighlight %}
 This command works only:
-
 if you cloned from a server to which you have write access and
 if nobody has pushed in the meantime
-Tagging
 
+### Tagging
 A tag marks a commit.
 
-Listing your tags
-
+#### Listing your tags
+{% highlight ruby %}
 git tag
-Creating tags
+{% endhighlight %}
 
-2 main types of tags:
+#### Creating tags
+2 main types of tags:  
+* lightweight = just a pointer to a specific commit
+* annotated = pointer to a tag object
 
-lightweight = just a pointer to a specific commit
-annotated = pointer to a tag object
 Annotated tags
 
 Create an annotated tag (full object):
-
+{% highlight ruby %}
 git tag -a <tagname>
+{% endhighlight %}
+
 Signed tags
 
 Sign your tags with GPG:
-
+{% highlight ruby %}
 git tag -s <tagname>
+{% endhighlight %}
+
 Lightweight tags
 
 Create a pointer to the current commit.

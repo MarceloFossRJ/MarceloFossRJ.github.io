@@ -29,6 +29,9 @@ instagram_username: marcelofossrj
 eyeem_username: marcelofossrj
 linkedin_username: marcelofoss
 
+google_analytics: UA-103516745-1
+google_ad_client: ca-pub-7262234031109039
+
 # Build settings
 markdown: kramdown
 theme: minima
