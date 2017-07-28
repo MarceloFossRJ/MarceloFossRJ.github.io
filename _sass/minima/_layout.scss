@@ -246,6 +246,33 @@ a.post-link:hover{
 }
 
 
+// For next and previous post
+.PageNavigation {
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.PageNavigation a {
+  display: block;
+  width: 100%;
+  float: left;  
+}
+
+.PageNavigation .next {
+  text-align: right;
+}
+
+.PageNavigation-container {
+    display: -webkit-flex;
+    display: flex;
+    width: auto;
+}
+
+.PageNavigation-2col {
+    width: 50%;
+}
+
 /**
  * Posts
  */
