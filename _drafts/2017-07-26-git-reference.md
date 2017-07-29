@@ -6,34 +6,38 @@ categories: [reference card]
 tags: [git, github]
 author: Marcelo Foss
 ---
-Git starts from the concept that a repository is composed of 4 different "trees" or "spaces":  
-![Git workflow]({{ site.url }}/assets/images/git_1.png)
+Git is a distributed version control system that uses the principle of a local repository and a remote repository
+Git Local repository is composed of 3 different "trees" or "spaces":  
 * Working Directory: holds the actual files. 
 * Index: which acts as a staging area
 * Local repository or HEAD: which points to the last commit you've made.
+And a remote repository
+* Remote repository: Network or Cloud (github, butbucket,...)
+![Git workflow]({{ site.url }}/assets/images/git_1.png)
 
 Additionally a file can have 3 states:
 * modified	
 * staged
 * committed
+* ff
 
 ### Git basics
 #### Configuring your name and email address  
-{% highlight ruby %}
+```
 $git config --global user.name "Your Name"
 $git config --global user.email you@example.com
-{% endhighlight %}
+```
 
 #### Creating a Git repository  
-To create and initialize the Git directory (.git) in the current folder:  
-{% highlight ruby %}
+To create and initialize the local Git repository (.git) in the current folder:  
+```
 $git init 
-{% endhighlight %}
+```
 
 To clone an existing repository:  
-{% highlight ruby %}
+```
 $git clone git://github.com/marcelofossrj/aca-rails.git
-{% endhighlight %}
+```
 It pulls down every version of every file for the history of the project.  
 
 * Allowed protocols for remotes:  
@@ -50,161 +54,160 @@ Each file can be in one of two states:
 * Untracked
 
 #### Ignoring files
-Set up a .gitignore file, with glob patterns (simplified regular expressions)
+Set up a .gitignore file, in the folder the repository was initialized, with glob patterns (simplified regular expressions)
 
 #### Tracking newly created files, or Staging modified files:
 To add a file to staging or index: 
-{% highlight ruby %}
+```
 $git add <filepattern>
 $git add .
 $git add <filename>
-{% endhighlight %}
+```
 
 #### Viewing your staged and unstaged changes
 
 ####To check the status of your files
-{% highlight ruby %}
+```
 $git status
-{% endhighlight %}
-
+```
 
 To see what you have changed but not yet staged:
-{% highlight ruby %}
+```
 $git diff
-{% endhighlight %}
+```
 doesn't show all the changes made since your last commit – only changes that are still unstaged.
 
 To see what you have staged that will go into your next commit
-{% highlight ruby %}
+```
 $git diff --cached                     # --staged is a synonym
-{% endhighlight %}
+```
 compares your staged changes to your last commit
 
 ### Committing your changes
 
 Commit your staged changes:
-{% highlight ruby %}
+```
 $git commit -m "My first commit!"
-{% endhighlight %}
+```
 Now the file is committed to the HEAD, but not in your remote repository yet.
 
 Skipping the staging area
-{% highlight ruby %}
+```
 $git commit -a
-{% endhighlight %}
+```
 automatically stage every file that is already tracked (saving all the changes into a single commit).
 
 ### Removing files
 
 Remove a file from your tracked files (from your staging area) and also from your working directory
-{% highlight ruby %}
+```
 $git rm
-{% endhighlight %}
+```
 
 Remove a file from your staging area but keep it in your working directory
-{% highlight ruby %}
+```
 $git rm --cached
 $git rm log/\*.log
-{% endhighlight %}
+```
 
 The backslash is necessary because Git does its own filename expansion in addition to your shell's filename expansion.
 
 ### Moving files
-{% highlight ruby %}
+```
 $git mv
-{% endhighlight %}
+```
 
 ### Viewing the commit history
 
 List the commits made in the repository
-{% highlight ruby %}
+```
 $git log
-{% endhighlight %}
+```
 
 Show the diff introduced in each commit
-{% highlight ruby %}
+```
 $git log -p
-{% endhighlight %}
+```
 
 #### Limiting log output
 
 Time-limiting options:
-{% highlight ruby %}
+```
 --since #after the specified date
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```
 --until #before the specified date
-{% endhighlight %}
+```
 
 Dates can be absolute ("2008-01-15") or relative ("2 weeks").
 
 #### Search criteria:
-{% highlight ruby %}
+```
 --author
 --committer
-{% endhighlight %}
+```
 
 #### Grep option:
-{% highlight ruby %}
+```
 --grep #search for keywords in the commit messages
 --all-match #match commit with both author and grep options, for example
-{% endhighlight %}
+```
 
 ### Undoing things
 #### Changing your last commit
 
 Fix the commit message:
-{% highlight ruby %}
+```
 $git commit --amend
-{% endhighlight %}
+```
 
 #### Unstaging a staged file
 Change which commit the current branch is pointing to.
-{% highlight ruby %}
+```
 $git reset HEAD <file>
-{% endhighlight %}
+```
 
 #### Unmodifying a modified file
 Revert a file back to what it looked like when you last committed
-{% highlight ruby %}
+```
 $git checkout -- <file>
-{% endhighlight %}
+```
 
 ### Working with remotes
 
 #### Showing your remotes
 Show the URL that Git has stored for the shortname to be expanded to:
-{% highlight ruby %}
+```
 $git remote -v
-{% endhighlight %}
+```
 origin is the default shortname Git gives to the server (or repo) you clone from.
 
 #### Adding remote repositories
-{% highlight ruby %}
+```
 $git remote add <shortname> <url>
 $git remote add origin https://github.com/MarceloFossRJ/aca-rails.git #git uses origin as default name for a remote	
-{% endhighlight %}	
+```
 
 #### Fetching and pulling from your remotes
 Pull down all the data from the remote project that you don't have yet in your repository (and update the remote refs):
-{% highlight ruby %}
+```
 $git fetch
-{% endhighlight %}
+```
 Git will not fetch data in your working directory (only in your Git directory) – you still have the files in your working directory. It fetches it in a separate (remote) branch: your master (or develop or whatever) branch is different from origin/master branch.
 
 Automatically fetch and then merge a remote branch into your current branch:
-{% highlight ruby %}
+```
 $git pull                                # It does commit!
-{% endhighlight %}
+```
 It is actually a bad idea to do both at the same time: it is highly recommended to do manually a fetch and then do a merge, unless you're the only person working at that repository. If pull blows up on you, it's a little hard to get out of it.
 
 #### Pushing to your remotes
 
 Push your master branch to your origin server:
-{% highlight ruby %}
+```
 $git push origin master
-{% endhighlight %}
+```
 This command works only:
 if you cloned from a server to which you have write access and
 if nobody has pushed in the meantime
@@ -213,9 +216,9 @@ if nobody has pushed in the meantime
 A tag marks a commit.
 
 #### Listing your tags
-{% highlight ruby %}
-git tag
-{% endhighlight %}
+```
+$git tag
+```
 
 #### Creating tags
 2 main types of tags:  
@@ -225,22 +228,23 @@ git tag
 Annotated tags
 
 Create an annotated tag (full object):
-{% highlight ruby %}
-git tag -a <tagname>
-{% endhighlight %}
+```
+$git tag -a <tagname>
+```
 
 Signed tags
 
 Sign your tags with GPG:
-{% highlight ruby %}
-git tag -s <tagname>
-{% endhighlight %}
+```
+$git tag -s <tagname>
+```
 
 Lightweight tags
 
 Create a pointer to the current commit.
-
+```
 git tag <tagname>
+```
 Verifying tags
 
 Verify the signature.
