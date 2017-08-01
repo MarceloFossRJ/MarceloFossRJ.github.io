@@ -11,8 +11,12 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       {% if page.author %}
-        <i>by</i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p>
+        <i>by</i> 
+		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<span itemprop="name">{{ page.author }}</span>
+		</span>
+      {% endif %}
+	</p>
   </header>
 
   <div class="post-content" itemprop="articleBody">

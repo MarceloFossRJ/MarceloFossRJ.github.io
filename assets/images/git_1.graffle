@@ -669,6 +669,18 @@
 			<string>Rectangle</string>
 			<key>Style</key>
 			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.34902</string>
+						<key>g</key>
+						<string>0.705882</string>
+						<key>r</key>
+						<string>0.698039</string>
+					</dict>
+				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>CornerRadius</key>
@@ -698,6 +710,18 @@ repository}</string>
 			<string>Rectangle</string>
 			<key>Style</key>
 			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.290196</string>
+						<key>g</key>
+						<string>0.517647</string>
+						<key>r</key>
+						<string>0.745098</string>
+					</dict>
+				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>CornerRadius</key>
@@ -726,6 +750,18 @@ repository}</string>
 			<string>Rectangle</string>
 			<key>Style</key>
 			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.419608</string>
+						<key>g</key>
+						<string>0.270588</string>
+						<key>r</key>
+						<string>0.854902</string>
+					</dict>
+				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>CornerRadius</key>
@@ -755,6 +791,18 @@ Index}</string>
 			<string>Rectangle</string>
 			<key>Style</key>
 			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.341176</string>
+						<key>g</key>
+						<string>0.380392</string>
+						<key>r</key>
+						<string>0.941176</string>
+					</dict>
+				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>CornerRadius</key>
@@ -820,7 +868,7 @@ Index}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-07-27 23:22:32 +0000</string>
+	<string>2017-07-29 18:11:24 +0000</string>
 	<key>Modifier</key>
 	<string>Marcelo Foss</string>
 	<key>NotesVisible</key>
