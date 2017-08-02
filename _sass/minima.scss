@@ -1,12 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Patua+One|Suez+One');
+@import url('https://fonts.googleapis.com/css?family=Suez+One');
 @charset "utf-8";
+@font-face {
+     font-family: monaco;
+     src: url('/assets/fonts/monaco.ttf'); 
+}
 
 // Define defaults for each variable.
 
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-family: 'Open Sans', serif !default;
+$post-font-family: 'Suez One', serif !default;
+$site-title-font-family: 'Monaco' !default;
+$code-font-family: 'Monaco' !default;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
+$code-font-size:   $base-font-size * 0.875 !default;
 
 $spacing-unit:     30px !default;
 
@@ -22,7 +32,7 @@ $footer-color: lighten($grey-color, 46%); //#efefef   #DCDCDC
 $header-color: $grey-color-light;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    1000px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;

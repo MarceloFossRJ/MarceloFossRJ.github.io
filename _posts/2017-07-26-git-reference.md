@@ -13,7 +13,8 @@ Git Local repository is composed of 3 different "trees" or "spaces":
 * Local repository or HEAD: which points to the last commit you've made.
 And a remote repository
 * Remote repository: Network or Cloud (github, butbucket,...)
-![Git workflow]({{ site.url }}/assets/images/git_1.png)
+
+<img src="/assets/images/git_1.png" alt="Git workflow" style="width: 600px;"/>
 
 Additionally a file can have 3 states:
 * modified	

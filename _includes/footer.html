@@ -2,9 +2,7 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }} 
-		<span class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></span>
-	</h2>
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
 	
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
@@ -20,6 +18,7 @@
             <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             {% endif %}
         </ul>
+		<span class="rss-subscribe two-column-right">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></span>
       </div>
 
       <div class="footer-col footer-col-2">
