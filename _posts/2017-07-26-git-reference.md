@@ -6,12 +6,13 @@ categories: [reference card]
 tags: [git, github]
 author: Marcelo Foss
 ---
-Git is a distributed version control system that uses the principle of a local repository and a remote repository
-Git Local repository is composed of 3 different "trees" or "spaces":  
+Git is a distributed version control system that uses a local repository and a remote repository.  
+A Git local repository is composed of 3 different "trees" or "spaces":  
 * Working Directory: holds the actual files. 
 * Index: which acts as a staging area
-* Local repository or HEAD: which points to the last commit you've made.
-And a remote repository
+* Local repository or HEAD: which points to the last commit you've made.  
+
+A git remote repository:  
 * Remote repository: Network or Cloud (github, butbucket,...)
 
 <img src="/assets/images/git_1.png" alt="Git workflow" style="width: 600px;"/>
@@ -20,7 +21,6 @@ Additionally a file can have 3 states:
 * modified	
 * staged
 * committed
-* ff
 
 ## Git basics
 #### Configuring your name and email address  
@@ -66,42 +66,47 @@ $git add <filename>
 ```
 
 ### Committing your changes
+Every commit is uniquely identified by its ID:  
+Commit ID = checksum of content (any number of files) + author + date + log message + ID of previous commit.
 
-Commit your staged changes:
+To Commit your staged changes:
 ```
-$git commit -m "My first commit!"
+$git commit -m "My first commit!" # The file is committed to the HEAD, but not in your remote repository yet.
 ```
-Now the file is committed to the HEAD, but not in your remote repository yet.
 
 Skipping the staging area
 ```
-$git commit -a
+$git commit -a  #commits only tracked files
+$git commit -am "commiting without staging" 
 ```
-automatically stage every file that is already tracked (saving all the changes into a single commit).
 
 ### Viewing your staged and unstaged changes
 
-#### To check the status of your files
+To list new or modified files not yet committed
 ```
 $git status
 ```
 
-#### To see what you have changed but not yet staged:
+To see what you have changed 
 ```
-$git diff
+$git diff  # To see only changes that are still unstaged.
+$git diff --cached  # To see what you have staged that will go into your next commit
+$git diff HEAD  # To see all staged and unstaged file changes
 ```
-doesn't show all the changes made since your last commit – only changes that are still unstaged.
 
-#### To see what you have staged that will go into your next commit
+To see the changes between two commit ids
 ```
-$git diff --cached                     # --staged is a synonym
+$git diff commit_1 commit_2
 ```
-compares your staged changes to your last commit
 
+To list the change dates and authors for a file
+```
+$git blame [file]
+```
 
 ### Viewing the commit history
 
-List the commits made in the repository
+To list the commits made in the repository
 ```
 $git log
 ```
@@ -113,24 +118,17 @@ $git log -p
 
 #### Limiting log output
 
-Time-limiting options:
+Time-limiting options  (dates can be absolute: "2008-01-15" or relative: "2 weeks")
 ```
 --since #after the specified date
-```
-
-```
 --until #before the specified date
 ```
-
-Dates can be absolute ("2008-01-15") or relative ("2 weeks").
-
-#### Search criteria:
+ Search criteria:
 ```
 --author
 --committer
 ```
-
-#### Grep option:
+Grep option:
 ```
 --grep #search for keywords in the commit messages
 --all-match #match commit with both author and grep options, for example
@@ -148,37 +146,26 @@ Remove a file from your staging area but keep it in your working directory
 $git rm --cached
 $git rm log/\*.log
 ```
-
 The backslash is necessary because Git does its own filename expansion in addition to your shell's filename expansion.
 
-### Moving files
-```
-$git mv
-```
-
 ### Reversing changes
-#### Undo Add or unstaging a file
+Undo Add or unstaging a file
 ```
 $git reset HEAD <file>
 ```
 
-#### Undo a commit or undo a merge or pull
+Undo a commit or undo a merge or pull
 ```
-$git reset --hard HEAD~3  #Rewind the master branch 3 commits. 
+$git reset --hard         # Revert everything to the last commit
+$git reset --hard HEAD~3  # Rewind the master branch 3 commits. 
 ```
 
-#### Reverting a modified file
 To revert a file back to what it looked like when you last committed
 ```
 $git checkout -- <file>
 ```
 
-#### Fix the commit message:
-```
-$git commit --amend
-```
-
-## Working with remotes
+## Working with remotes	
 
 ### Showing your remotes
 Show the URL that Git has stored for the shortname to be expanded to:
@@ -193,20 +180,17 @@ $git remote add <shortname> <url>
 $git remote add origin https://github.com/MarceloFossRJ/aca-rails.git #git uses origin as default name for a remote	
 ```
 
-### Fetching and pulling from your remotes
-Pull down all the data from the remote project that you don't have yet in your repository (and update the remote refs):
+## Synchronizing repositories
+To get the latest changes from origin with no merge. Git will not fetch data in your working directory (only in your Git directory) – you still have the files in your working directory. It fetches it in a separate (remote) branch: your master (or develop or whatever) branch is different from origin/master branch.
 ```
 $git fetch
 ```
-Git will not fetch data in your working directory (only in your Git directory) – you still have the files in your working directory. It fetches it in a separate (remote) branch: your master (or develop or whatever) branch is different from origin/master branch.
 
-#### Automatically fetch and then merge a remote branch into your current branch:
+To fetch the latest changes from origin and merge
+It incorporates changes from a remote repository into the current branch. More precisely, git pull runs git fetch and calls git merge to merge the retrieved branch heads into the current branch. 
 ```
-$git pull                                # It does commit!
+$git pull  # It does commit!
 ```
-It is actually a bad idea to do both at the same time: it is highly recommended to do manually a fetch and then do a merge, unless you're the only person working at that repository. If pull blows up on you, it's a little hard to get out of it.
-
-#### Pushing to your remotes
 
 Push your master branch to your origin server:
 ```
@@ -224,7 +208,7 @@ A tag marks a commit.
 $git tag
 ```
 
-### Creating tags
+#### Creating tags
 Git has 2 main types of tags:  
 * **lightweight**: is just a named pointer to a specific commit. This type of tag does not allow you to store any information that specific to the tag.
 * **annotated**: is a regular Git object, can be referred because they have their own SHA key and has its own commit hash. It allows to store a tag message, GPG sign it, and the tagger is stored.
@@ -274,9 +258,6 @@ A branch is a parallel version of a codebase. Is used to develop features isolat
 The repository is initiated with the master branch, which is the "default" git branch.  
 Create new branches to develop new features, and when finished merge them back to the master branch.
 
-Every commit is uniquely identified by its ID:  
-Commit ID = checksum of content (any number of files) + author + date + log message + ID of previous commit.
-
 A branch in Git is a file that contains the 40 hex-digit SHA-1 checksum of the commit it points to.
 
 The difference between a branch and a tag is that when you make a commit with the master branch currently checked out, master will move to point to the new commit, effectively adding it to the branch. Tags don't.
@@ -300,7 +281,7 @@ $ git checkout <branch_name>
 
 Create a branch and switch to it at the same time:
 ```
-$git checkout -b <branch_name>                 # branch and checkout
+$git checkout -b <branch_name>  # branch and checkout
 ```
 
 Delete a branch
@@ -337,16 +318,3 @@ If there is a merge conflict (automatic merge failed):
 ```
 $git mergetool
 ```
-
-### Tips and tricks
-
-Auto-completion
-```
-source ~/git-completion.bash
-```
-
-
-
-https://zeroturnaround.com/rebellabs/git-commands-and-best-practices-cheat-sheet/  
-https://scotch.io/bar-talk/git-cheat-sheet  
-http://www.pirilampo.org/docs/git-refcard.html  
