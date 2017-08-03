@@ -299,7 +299,7 @@ $git merge <branch_name_1>
 1. Checkout or create new branch 
 ```$git checkout -b <new_branch>```
 2. Apply changes and commit
-```$git commit -asm 'your comment'```
+```$git commit -a -m 'your comment'```
 4. Merge changes from others 
 ```$git merge master```
 5. Checkout master (or the branch you wish to merge into) 
