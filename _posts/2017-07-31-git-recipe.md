@@ -10,6 +10,20 @@ The official Git documentation has the fantastic **giteveryday** guide, that can
 [https://git-scm.com/docs/giteveryday](https://git-scm.com/docs/giteveryday)
 
 This article reformats the referred guide.
+
+### The most basic workflow
+1. Checkout or create new branch 
+```$git checkout -b <new_branch>```
+2. Apply changes and commit
+```$git add .``` and ```$git commit -m 'your comment'```
+4. Merge changes from others 
+```$git merge master```
+5. Checkout master (or the branch you wish to merge into) 
+```$git checkout master```
+6. Merge the new branch 
+```$git merge <new_branch>```
+7. Delete the branch you no longer need or you can also continue to develop on the new branch, merging it in a later moment.
+
  
 ### For the individual Developer (Standalone)
 A standalone individual developer does not exchange patches with other people, and works alone in a single repository.
