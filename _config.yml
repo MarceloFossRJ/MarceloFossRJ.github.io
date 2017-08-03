@@ -18,7 +18,7 @@ author: Marcelo Foss
 email: marcelo.foss.rj@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A space to archive software development recipes, 
-  snippets, cheat sheets, and guidelines, 
+  references, cheat sheets, guidelines, 
   as well as my ideas and convictions about the process of creating software.
   
 baseurl: "" # the subpath of your site, e.g. /blog
