@@ -7,7 +7,7 @@ tags: [macosx, el capitan, facetime]
 author: Marcelo Foss
 ---
 The problem: Facetime Camera Not Working.  
-I have OSX El Capitain installed in my Macbook Pro, and from time to time, hhe facetime camera stops working. 
+I have OSX El Capitain running in my Macbook Pro, and from time to time, the facetime camera stops working. 
 
 To fix this problem, do the following:
 
