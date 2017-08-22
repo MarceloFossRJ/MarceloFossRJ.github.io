@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rails Engines Recipes"
-date:   2017-08-22 11:13:20 -0300
+date:   2017-08-21 11:13:20 -0300
 categories: [recipe]
 tags: [rails, engines, gem, components, rspec, cucumber, capybara, shoulda, factory-girl]
 author: Marcelo Foss

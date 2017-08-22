@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Recipe to use paper_trail on Rails engines"
-date:   2017-08-21 15:22:20 -0300
+date:   2017-08-22 15:22:20 -0300
 categories: [recipe]
 tags: [rails, engines, gem, components, ror, paper_trail]
 author: Marcelo Foss
