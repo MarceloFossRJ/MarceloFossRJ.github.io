@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rails Engines Recipes"
-date:   2017-08-21 14:22:20 -0300
+date:   2017-08-22 11:13:20 -0300
 categories: [recipe]
 tags: [rails, engines, gem, components, rspec, cucumber, capybara, shoulda, factory-girl]
 author: Marcelo Foss
@@ -233,7 +233,7 @@ require File.expand_path("../dummy/config/environment", __FILE__) ##
 
 Create a scaffold, and run migrations:
 ```
-$ rails g scaffold user name:string login:string emai:string password_digest:string is_active:boolean is_admin:boolean
+$ rails g scaffold tenant name:string subdomain:string
 $ rm -rf test # For some reason Rails still generates the test directory
 $ rake db:create
 $ rake db:migrate RAILS_ENV=test
@@ -246,25 +246,37 @@ $bundle exec rake app:db:test:prepare
 ```
 or
 ```
-$ rspec spec/controllers/appointly/appointments_controller_spec.rb
+$ rspec spec/controllers/gem_name/tenants_controller_spec.rb
 ```
-This will fail...    
+It will fail...    
 What I suppose is that since it is an isolated engine (i.e. an engine designed not to interfere with the routes, helpers, etc. defined in your application).  
 It is necessary to explicitly say that the engine routes are being used, not the dummy app's routes.  
-Add the command ```use_route: :appointly``` to your spec:
+Add the command ```use_route: :gem_name``` to your spec, firt to the INDEX action:
 ```ruby
+#spec/controllers/gem_name/tenants_controller_spec.rb
 describe "GET index" do
-  it "assigns all appointments as @appointments" do
-    appointment = Appointment.create! valid_attributes
+  it "assigns all tenants as @tenants" do
+    tenant = Tenant.create! valid_attributes
     # get :index, {}, valid_session
-    get :index, { use_route: :appointly }, valid_session
-    assigns(:appointments).should eq([appointment])
+    get :index, { use_route: :gem_name }, valid_session
+    assigns(:tenants).should eq([tenant])
+  end
+end
+```
+and the same to the NEW action
+```ruby
+#spec/controllers/gem_name/tenants_controller_spec.rb
+describe "GET #new" do
+  it "returns a success response" do
+    #get :new, params: {}, session: valid_session
+    get :new, { use_route: :gem_name }, valid_session
+    expect(response).to be_success
   end
 end
 ```
 Run the spec again...
 ```
-$rspec spec/controllers/appointly/appointments_controller_spec.rb
+$rspec spec/controllers/gem_name/tenants_controller_spec.rb
 ```
 ...and it will pass.  
 Run ```rspec``` for tests or ```spec/dummy/bin/rails s``` for running test app
@@ -284,6 +296,6 @@ ENV["RAILS_ROOT"] ||= File.dirname(__FILE__) + '../../../spec/dummy' ##
 require 'cucumber/rails'
 # Add the following line to use factory_girl
 require 'factory_girl_rails'
-require File.expand_path(File.dirname(__FILE__) + '/../../spec/support/factories') 
+require File.expand_path(File.dirname(__FILE__) + '/../../spec/factories') 
 ```
 
