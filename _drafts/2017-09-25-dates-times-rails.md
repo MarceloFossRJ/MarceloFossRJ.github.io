@@ -1,0 +1,1 @@
+http://nandovieira.com/working-with-dates-on-ruby-on-rails
