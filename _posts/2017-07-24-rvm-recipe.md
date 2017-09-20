@@ -2,13 +2,13 @@
 layout: post
 title:  "The RVM Recipe"
 date:   2017-07-24 17:12:01 -0300
-categories: [recipes]
+categories: [recipe]
 tags: []
 author: Marcelo Foss
 ---
 Ruby Version Manager, aka RVM, is a command line tool designed to manage multiple installations of Ruby on the same device.
-In addition to allowing you to install and use multiple Ruby versions, it has other interesting features that you can use to maintain organization between projects with different gems. 
-In this article I will explain my basic workflow and also some tips on using RVM. 
+In addition to allowing you to install and use multiple Ruby versions, it has other interesting features that you can use to maintain organization between projects with different gems.
+In this article I will explain my basic workflow and also some tips on using RVM.
 I do suppose that RVM is already installed.
 
 ## RVM Basic Commands
@@ -44,12 +44,12 @@ $rvm 2.3.3 --default
 
 Using the default ruby version
 {% highlight ruby %}
-$rvm use default 
-{% endhighlight %}	
-        
+$rvm use default
+{% endhighlight %}
+
 ## Gemsets
 RVM by default allows creating multiple environments for one ruby - called *gemsets*.
-Gemsets is a feature that allows you manage gem versions, so it is possible to define a package (or set)of gems with a specific version. When assigning a gemset to a project you ensure that you have an isolated environment acessing the correct version of each gem. 
+Gemsets is a feature that allows you manage gem versions, so it is possible to define a package (or set)of gems with a specific version. When assigning a gemset to a project you ensure that you have an isolated environment acessing the correct version of each gem.
 
 During installation of Ruby, RVM creates two gemsets:
 - default - automatically selected when no @gemset specified: rvm use 1.9.3
@@ -123,7 +123,7 @@ I have all gemsets installed at /users/foss/gems
 
 ## Separate Gemset to each project
 Whenever you change to a directory (cd directory), RVM checks if there is a .rvmrc inside it.
-This file is a shell script that can contain any code needed to initialize the project environment. 
+This file is a shell script that can contain any code needed to initialize the project environment.
 For example, if you want to load a gemset with a specific ruby version every time you enter the project directory, you just need to create a .rvmrc with the content:
 
 {% highlight ruby %}

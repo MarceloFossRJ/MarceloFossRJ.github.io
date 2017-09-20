@@ -2,7 +2,7 @@
 layout: post
 title:  "Rails naming convention"
 date:   2017-07-20 20:32:34 -0300
-categories: [recipes]
+categories: [recipe]
 tags: [ruby, ror]
 author: Marcelo Foss
 ---
@@ -32,11 +32,11 @@ The model is named using the class naming convention of unbroken MixedCase and i
 For example:  
 * Table name might be users (plural)
 * The model name would be User (singular)
-* Rails will then look for the class definition in a file called user.rb in the /app/models directory. 
+* Rails will then look for the class definition in a file called user.rb in the /app/models directory.
 * If the model class name has multiple capitalised words, the table name is assumed to have underscores between these words.
 
 **Database Table** - *e.g. user_permissions, users*  
-Table names have all lowercase letters and underscores between words, also all table names need to be plural. 
+Table names have all lowercase letters and underscores between words, also all table names need to be plural.
 
 **Primary Key**  
 The primary key of a table is assumed to be named id.
@@ -50,7 +50,7 @@ Tables used to join two tables in a many to many relationship is named using the
 **Automated Record Timestamps**  
 You can get ActiveRecord to automatically update the create and update times of records in a database table. To do this create two specially named columns created_at and updated_at to your table, i.e. t.datetime :created_at and t.datetime :updated_at. If you only want to store the date rather than a date and time, use :created_on and :updated_on.
 
-### Naming Convention Summary 
+### Naming Convention Summary
 
 #### Model Naming Convention
 
@@ -78,4 +78,3 @@ You can get ActiveRecord to automatically update the create and update times of 
 	Unit: 		/test/unit/user_test.rb
 	Functional: 	/test/functional/users_controller_test.rb
 	Fixtures: 	/test/fixtures/users.yml
-	

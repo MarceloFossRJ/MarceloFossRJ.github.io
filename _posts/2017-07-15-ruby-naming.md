@@ -2,11 +2,11 @@
 layout: post
 title:  "Ruby naming convention"
 date:   2017-07-15 19:45:31 -0300
-categories: [recipes]
+categories: [recipe]
 tags: [ruby]
 author: Marcelo Foss
 ---
-Ruby uses a unique convention for naming objects: 
+Ruby uses a unique convention for naming objects:
 it uses the first character of an identifier to determine its purpose.  
 Certain names, are reserved words and should not be used as variable, method, class, or module name. See the section 'Reserved words' below.   
 Lowercase letter means the characters "a" through "z".  
@@ -24,7 +24,7 @@ However you can't place a number right after the @ symbol.
 You need to divide multiword variables by placing an underscore between each word pair.   
 Additionally you need to capitalize the first letter of each word.  
 The name of a method may end with =, !, or ?
-	
+
 **Symbols**  
 A symbol is a constant name that doesn't require pre-declaration. Additionally, a symbol is unique 100% of the time. Symbol literals begin with ":"
 
@@ -106,4 +106,3 @@ A symbol is a constant name that doesn't require pre-declaration. Additionally, 
 | yield             | Executes the block passed to the method. |  
 | _ _FILE_ _        | Name of current source file. |  
 | _ _LINE_ _        | Number of current line in the current source file. |  
-
