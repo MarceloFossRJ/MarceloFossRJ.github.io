@@ -6,7 +6,7 @@ categories: [reference card]
 tags: [linux]
 author: Marcelo Foss
 ---
-This post provides a shortcut for the most frequently used linux commands, for a wide variety of situations, from common file handling to checking system load. 
+This post provides a shortcut for the most frequently used linux commands, for a wide variety of situations, from common file handling to checking system load.
 
 The usual Linux command format is:
 ```
@@ -38,29 +38,29 @@ Copies a file to the specified location (overwriting the existing file silently)
 Removes a file or directory
 -rf : Removes a directory (recursively and forced, so it will not prompt)
 
-* mkdir  
+* mkdir [directory]  
 make directory - command allows the user to make a new directory.
 
-* rmdir  
+* rmdir [directory]  
 remove directory - allows the user to remove an empty directory
 
 * pwd  
 Display the pathname for the current directory
 
 ## File commands
-* touch  
+* touch [file]  
 The touch command - a.k.a. the make file command - allows users to make files using the Linux CLI.
 
-* cat  
+* cat [file]  
 Display file’s contents to terminal
 
-* less  
+* less [file]  
 View the contents of a file one page at a time
 
-* tail  
+* tail [file]  
 Display the last n lines of a file (the default is 10)
 
-* file  
+* file [file]  
 Determine what type of data is within a file.
 
 * find  
@@ -71,7 +71,7 @@ Detailed description: [https://www.computerhope.com/unix/ufind.htm](https://www.
 Search files or output for a particular pattern  
 Detailed description: [https://www.computerhope.com/unix/ugrep.htm](https://www.computerhope.com/unix/ugrep.htm)
 
-* ln  
+* ln [file] [file]  
 Create hard or symbolic link between files
 ```
 $ln /path/to/file /path/to/link     #creates a hard link
@@ -92,7 +92,7 @@ $chmod u=rwx,g=rx,o=r myfile
 $chmod 754 myfile
 ```
 
-* chown  
+* chown [options] [file]  
 Change who owns a file
 -R : add recursive permissions  
 ```
@@ -100,17 +100,17 @@ $chown foss file.txt
 $chown -R foss /files/work
 ```
 
-* tar  
+* tar [options] [file/location]  
 command used to work with tarballs ( files compressed in a tarball archive).
 It can compress and extract files (preserving the file directory structure) from a tarfile (.tar) or tarball (.tar.gz or .tgz)  
-To create a new tar file§:  
+To create a new tar file:  
 ```
 $tar cvf archive_name.tar dirname/ # creates an archive
 $tar xvf archive_name.tar  # unconpress a file
 $tar tvf archive_name.tar  # view file contents
 ```
 
-* gzip  
+* gzip [options] [file]  
 command used to work with gz compressed files.  
 -d : decompress a file  
 ```
@@ -118,7 +118,7 @@ $gzip test.txt  # compress a file
 $gzip -d test.txt.gz # uncompress a file
 ```
 
-* unzip  
+* unzip [options] [file]  
 command to uncompress a zip file:
 ```
 $unzip test.zip
@@ -191,15 +191,15 @@ Reboots the system.
 Forces bash to read the specified script.
 
 ## Remote
-* ssh [username@ipaddress]  
-Logs into a secure shell session.
--l : login user name
+* ssh [username@ipaddress]   
+Logs into a secure shell session  
+-l : login user name  
 ```
 ssh -l foss remotehost.example.com
 ```
 
 * wget [location]  
-Obtains a file from the Internet.
+Obtains a file from the Internet  
 -O : saves the file with a different name
 ```
 $wget http://marcelofossrj.github.io/repos/file.zip
@@ -207,38 +207,38 @@ $wget -O file2.zip http://marcelofossrj.github.io/repos/file.zip
 ```
 
 * curl  
-a tool to transfer data from or to a server. It supports HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, DICT, TELNET, LDAP or FILE.
+a tool to transfer data from or to a server. It supports HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, DICT, TELNET, LDAP or FILE  
 Basic usage:  
 ```
 $curl example.com  #shows the http content
 $curl example.com > example.html #saves the the content
 $curl -o example.html example.com #also saves the content
 ```
-Detailed description:
+Detailed description:  
 [http://www.slashroot.in/curl-command-tutorial-linux-example-usage](http://www.slashroot.in/curl-command-tutorial-linux-example-usage)
 
 
 ## Services and processes commands
 * df  
-Display used and available disk space.  
--m : show in megabytes
--h : show output in human form
+Display used and available disk space  
+-m : show in megabytes  
+-h : show output in human form  
 
 * du  
-Show how much space each file takes up
+Show how much space each file takes up  
 
 * ps  
-Display a snapshot of the currently running processes
+Display a snapshot of the currently running processes  
 ```
 $ps -ef | more   #view running processes
 $ps -efH | more  #view running processes in tree
 ```
 
 * top  
-Displays the resources being used on your system. Press q to exit.
+Displays the resources being used on your system. Press q to exit  
 
 * kill  
-Stop a process. If the process refuses to stop, use kill -9 pid
+Stop a process. If the process refuses to stop, use kill -9 pid  
 
 * Service  
 Service command is used to run the system V init scripts. i.e Instead of calling the scripts located in the /etc/init.d/ directory with their full path, you can use the service command
