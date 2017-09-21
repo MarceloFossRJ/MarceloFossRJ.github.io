@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Linux commmand line reference : the most used"
+title:  "A quick Linux command line reference"
 date:   2017-09-20 19:45:31 -0300
 categories: [reference card]
 tags: [linux]
