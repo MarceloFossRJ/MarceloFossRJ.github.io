@@ -6,12 +6,16 @@ categories: [reference card]
 tags: [linux]
 author: Marcelo Foss
 ---
+This post provides a shortcut for the most frequently used linux commands, for a wide variety of situations, from common file handling to checking system load. 
 
-Usual Linux command format:
+The usual Linux command format is:
 ```
 command -option(s) argument(s)
 ```
-For example, rm -r test_app
+For example:
+```
+$rm -rf test_app
+```
 
 ## Basic file and tree commands
 * ls  
