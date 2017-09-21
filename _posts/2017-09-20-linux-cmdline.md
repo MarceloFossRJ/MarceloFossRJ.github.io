@@ -65,11 +65,18 @@ Determine what type of data is within a file.
 
 * find  
 Search for files matching a provided pattern.  
-Detailed description: [https://www.computerhope.com/unix/ufind.htm](https://www.computerhope.com/unix/ufind.htm)
+-name : find a file by the name  
+-iname : find a file by the name ignoring the case  
+```
+$find -iname "users.rb"
+```
+Link with command detailed description: [https://www.computerhope.com/unix/ufind.htm](https://www.computerhope.com/unix/ufind.htm)
+[http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/](http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/)
 
 * grep  
 Search files or output for a particular pattern  
-Detailed description: [https://www.computerhope.com/unix/ugrep.htm](https://www.computerhope.com/unix/ugrep.htm)
+Link with command detailed description: [https://www.computerhope.com/unix/ugrep.htm](https://www.computerhope.com/unix/ugrep.htm)  
+[http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/](http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
 * ln [file] [file]  
 Create hard or symbolic link between files
@@ -78,7 +85,7 @@ $ln /path/to/file /path/to/link     #creates a hard link
 $ln -s /path/to/file /path/to/link  #creates a symbolic link
 ```
 
-Detailed description:  
+Link with command detailed description:  
 [https://www.lifewire.com/create-symbolic-links-ln-command-4059723](https://www.lifewire.com/create-symbolic-links-ln-command-4059723)  
 [https://www.computerhope.com/unix/uln.htm](https://www.computerhope.com/unix/uln.htm)
 
@@ -109,6 +116,8 @@ $tar cvf archive_name.tar dirname/ # creates an archive
 $tar xvf archive_name.tar  # unconpress a file
 $tar tvf archive_name.tar  # view file contents
 ```
+Link with command detailed description:  
+[http://www.thegeekstuff.com/2010/04/unix-tar-command-examples/](http://www.thegeekstuff.com/2010/04/unix-tar-command-examples/)
 
 * gzip [options] [file]  
 command used to work with gz compressed files.  
@@ -214,7 +223,7 @@ $curl example.com  #shows the http content
 $curl example.com > example.html #saves the the content
 $curl -o example.html example.com #also saves the content
 ```
-Detailed description:  
+Link with command detailed description:  
 [http://www.slashroot.in/curl-command-tutorial-linux-example-usage](http://www.slashroot.in/curl-command-tutorial-linux-example-usage)
 
 
@@ -249,4 +258,7 @@ $service --status-all
 ```
 
 * free
-Command used to display the free, used, swap memory available in the system
+Command used to display the free, used, and swap memory available in the system in bytes  
+-g : shows in giga bytes  
+-m : shows in mega bytes  
+-k : shows in kilo bytes  
