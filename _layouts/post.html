@@ -11,7 +11,7 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       {% if page.author %}
-        <i>by</i> 
+        <i>by</i>&nbsp; 
 		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
 			<span itemprop="name">{{ page.author }}</span>
 		</span>
@@ -30,7 +30,7 @@ layout: default
     		<a class="prev" href="{{page.previous.url}}">&laquo; Previous Post</a>
     		<a class="prev" href="{{page.previous.url}}">{{page.previous.title}}</a>
   		{% else %}
-    		<a class="prev"></a>  
+    		<a class="prev"></a>
   		{% endif %}
   	</div>
 	<div class = "PageNavigation-2col">

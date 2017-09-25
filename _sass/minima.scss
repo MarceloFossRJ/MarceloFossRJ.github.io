@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Patua+One|Suez+One');
 @import url('https://fonts.googleapis.com/css?family=Suez+One');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:700');
+
 @charset "utf-8";
 @font-face {
      font-family: monaco;
-     src: url('/assets/fonts/monaco.ttf'); 
+     src: url('/assets/fonts/monaco.ttf');
 }
 
 // Define defaults for each variable.
 
+$header-font-family: 'PT Serif', serif !default;
 $base-font-family: 'Open Sans', serif !default;
 $post-font-family: 'Suez One', serif !default;
 $site-title-font-family: 'Monaco' !default;

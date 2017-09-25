@@ -5,7 +5,7 @@ layout: default
 <div class="home">
 
   <h1 class="page-heading">Posts</h1>
-  
+
   {{ content }}
 
   <ul class="post-list">
@@ -15,7 +15,7 @@ layout: default
 
         <span class="post-meta">{{ post.date | date: date_format }}</span>
 		{% if post.author %}
-        	<i class="post-meta">by</i> 
+        	<i class="post-meta">by</i>&nbsp; 
 			<span itemprop="author" itemscope itemtype="http://schema.org/Person">
 				<span itemprop="name" class="post-meta">{{ post.author }}</span>
 			</span>
@@ -26,7 +26,7 @@ layout: default
         </h2>
 
 		{{ post.excerpt }}
-		
+
         <a class="post-readme" href="{{ post.url | relative_url }}">Read more</a>
       </li>
     {% endfor %}

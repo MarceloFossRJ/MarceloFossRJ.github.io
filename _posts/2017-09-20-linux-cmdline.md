@@ -19,10 +19,10 @@ $rm -rf test_app
 
 ## Basic file and tree commands
 * ls  
-the list command - functions in the Linux terminal to show all of the major directories filed under a given file system  
--a : show hidden files
--lah : show file size in kb
--ltr : Order files based on last modified time
+*the list command* - functions in the Linux terminal to show all of the major directories filed under a given file system  
+-a : show hidden files  
+-lah : show file size in kb  
+-ltr : Order files based on last modified time  
 
 * cd [location]  
 Changes the current working directory. Without an argument, it goes to the user’s home.

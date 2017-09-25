@@ -8,7 +8,7 @@ author: Marcelo Foss
 ---
 Git is a distributed version control system that uses a local repository and a remote repository.  
 A Git local repository is composed of 3 different "trees" or "spaces":  
-* Working Directory: holds the actual files. 
+* Working Directory: holds the actual files.
 * Index: which acts as a staging area
 * Local repository or HEAD: which points to the last commit you've made.  
 
@@ -18,21 +18,21 @@ A git remote repository:
 <img src="/assets/images/git_1.png" alt="Git workflow" style="width: 600px;"/>
 
 Additionally a file can have 3 states:
-* modified	
+* modified
 * staged
 * committed
 
 ## Git basics
-#### Configuring your name and email address  
+### Configuring your name and email address  
 ```
 $git config --global user.name "Your Name"
 $git config --global user.email you@example.com
 ```
 
-#### Creating a Git repository  
+### Creating a Git repository  
 To create and initialize the local Git repository (.git) in the current folder:  
 ```
-$git init 
+$git init
 ```
 
 To clone an existing repository:  
@@ -55,10 +55,10 @@ Each file can be in one of two states:
 * Untracked
 
 ### Ignoring files
-Set up a .gitignore file, in the folder the repository was initialized, with glob patterns (simplified regular expressions)
+Set up a .gitignore file, in the folder the repository was initialized, with glob patterns (simplified regular expressions <a href='https://en.wikipedia.org/wiki/Glob_(programming)' target='_blank'>https://en.wikipedia.org/wiki/Glob_(programming)</a>)
 
 ### Tracking newly created files, or Staging modified files:
-To add a file to staging or index: 
+To add a file to staging or index:
 ```
 $git add <filepattern>
 $git add .
@@ -77,7 +77,7 @@ $git commit -m "My first commit!" # The file is committed to the HEAD, but not i
 Skipping the staging area
 ```
 $git commit -a  #commits only tracked files
-$git commit -am "commiting without staging" 
+$git commit -am "commiting without staging"
 ```
 
 ### Viewing your staged and unstaged changes
@@ -87,7 +87,7 @@ To list new or modified files not yet committed
 $git status
 ```
 
-To see what you have changed 
+To see what you have changed
 ```
 $git diff  # To see only changes that are still unstaged.
 $git diff --cached  # To see what you have staged that will go into your next commit
@@ -157,7 +157,7 @@ $git reset HEAD <file>
 Undo a commit or undo a merge or pull
 ```
 $git reset --hard         # Revert everything to the last commit
-$git reset --hard HEAD~3  # Rewind the master branch 3 commits. 
+$git reset --hard HEAD~3  # Rewind the master branch 3 commits.
 ```
 
 To revert a file back to what it looked like when you last committed
@@ -165,7 +165,7 @@ To revert a file back to what it looked like when you last committed
 $git checkout -- <file>
 ```
 
-## Working with remotes	
+## Working with remotes
 
 ### Showing your remotes
 Show the URL that Git has stored for the shortname to be expanded to:
@@ -177,7 +177,7 @@ origin is the default shortname Git gives to the server (or repo) you clone from
 ### Adding remote repositories
 ```
 $git remote add <shortname> <url>
-$git remote add origin https://github.com/MarceloFossRJ/aca-rails.git #git uses origin as default name for a remote	
+$git remote add origin https://github.com/MarceloFossRJ/aca-rails.git #git uses origin as default name for a remote
 ```
 
 ## Synchronizing repositories
@@ -187,7 +187,7 @@ $git fetch
 ```
 
 To fetch the latest changes from origin and merge
-It incorporates changes from a remote repository into the current branch. More precisely, git pull runs git fetch and calls git merge to merge the retrieved branch heads into the current branch. 
+It incorporates changes from a remote repository into the current branch. More precisely, git pull runs git fetch and calls git merge to merge the retrieved branch heads into the current branch.
 ```
 $git pull  # It does commit!
 ```
@@ -222,7 +222,7 @@ $ git tag -s -a -m <message> <tagname>
 ```-a``` will create an annotated tag. Git will prompt for an annotation.  
 
 ```-m <message>``` will add a tag message. Git will *not* prompt for an annotation   
-	
+
 If you need to amend / fix / replace an existing tag, you can use the ```-f``` parameter to overwrite the current tag.
 
 ```
@@ -296,15 +296,15 @@ $git merge <branch_name_1>
 ```
 
 ## A basic workflow
-1. Checkout or create new branch 
+1. Checkout or create new branch
 ```$git checkout -b <new_branch>```
 2. Apply changes and commit
 ```$git commit -a -m 'your comment'```
-4. Merge changes from others 
+4. Merge changes from others
 ```$git merge master```
-5. Checkout master (or the branch you wish to merge into) 
+5. Checkout master (or the branch you wish to merge into)
 ```$git checkout master```
-6. Merge the new branch 
+6. Merge the new branch
 ```$git merge <new_branch>```
 7. Delete the branch you no longer need or you can also continue to develop on the new branch, merging it in a later moment.
 
