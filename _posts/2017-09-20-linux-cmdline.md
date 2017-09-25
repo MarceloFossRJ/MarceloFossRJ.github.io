@@ -262,3 +262,6 @@ Command used to display the free, used, and swap memory available in the system 
 -g : shows in giga bytes  
 -m : shows in mega bytes  
 -k : shows in kilo bytes  
+
+
+[comment]: <> (https://diyhacking.com/linux-commands-for-beginners/)
