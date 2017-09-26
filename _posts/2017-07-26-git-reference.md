@@ -49,7 +49,6 @@ It pulls down every version of every file for the history of the project.
 	(rsync:// and ftp:// are not recommended)
 
 ## Recording changes to the repository
-
 Each file can be in one of two states:  
 * Tracked
 * Untracked
