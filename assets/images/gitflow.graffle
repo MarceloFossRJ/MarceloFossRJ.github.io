@@ -613,8 +613,8 @@
 			<integer>101</integer>
 			<key>Points</key>
 			<array>
-				<string>{372.42311584998447, 509.05630144489498}</string>
-				<string>{335.15131722433347, 518.94860370832487}</string>
+				<string>{372.4232890053724, 509.05690245624868}</string>
+				<string>{335.15204872388938, 518.95114131009143}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -780,8 +780,8 @@
 			<integer>95</integer>
 			<key>Points</key>
 			<array>
-				<string>{436.80726648293393, 470.78625167094316}</string>
-				<string>{335.29830267280249, 477.25425371961506}</string>
+				<string>{436.80726697364236, 470.78625876001934}</string>
+				<string>{335.29830732300377, 477.25432090741532}</string>
 			</array>
 			<key>Style</key>
 			<dict>
