@@ -23,7 +23,7 @@ The more frequent there is a release, the nearer your feature branches should be
 
 ### Testing
 What is the maturity of the team? What is the level of automated tests? What is the confidence that the new feature will do or behave as expected? How QA is applied for the application, is there a dedicated QA team, an acepptance testing procedure? In which stage aceeptance testing is performed?
-When the acceptance testing is applied? How many time between acceptance testing and the release is available to fix 
+When the acceptance testing is applied? How many time between acceptance testing and the release is available to fix
 There are lots of options around this, but it generally boils down to either early stream or late stream QA. The early variant means that a feature is tested before it is merged, the late variant means it’s tested afterwards. If your QA is early stream then you can probably get away with having your feature branch close to the mainline. If it’s late, then a release branch is probably where your QA should take place, so that failures can be rectified before they reach the mainline.
 The only exception to that rule is if you have either particularly spare release cadence (so there’s time to fix things), or a reasonably high bug tolerance, for example if a project is pre-release or is an internal tool that isn’t mission critical. In these cases it’s generally wise to avoid additional long-lived branches and get straight to the mainline.
 ### Release Certainty
@@ -64,9 +64,11 @@ Ultimately, you have to be pragmatic. A complex strategy that mirrors your proce
 
 [https://guides.github.com/introduction/flow/](https://guides.github.com/introduction/flow/)
 
+! http://ndemengel.github.io/2014/05/15/continuous-delivery-recipes-branching-strategies/
+
+
 https://medium.com/@jezhalford/choosing-a-git-branching-strategy-cd7a774a68a1
 
-http://ndemengel.github.io/2014/05/15/continuous-delivery-recipes-branching-strategies/
 
 https://fjorgemota.com/git-flow-uma-forma-legal-de-organizar-repositorios-git/
 
