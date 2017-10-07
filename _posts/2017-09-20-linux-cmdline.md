@@ -75,7 +75,8 @@ Link with command detailed description: [https://www.computerhope.com/unix/ufind
 
 * grep  
 Search files or output for a particular pattern  
-Link with command detailed description: [https://www.computerhope.com/unix/ugrep.htm](https://www.computerhope.com/unix/ugrep.htm)  
+Link with command detailed description:   
+[https://www.computerhope.com/unix/ugrep.htm](https://www.computerhope.com/unix/ugrep.htm)  
 [http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/](http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
 * ln [file] [file]  
@@ -84,7 +85,6 @@ Create hard or symbolic link between files
 $ln /path/to/file /path/to/link     #creates a hard link
 $ln -s /path/to/file /path/to/link  #creates a symbolic link
 ```
-
 Link with command detailed description:  
 [https://www.lifewire.com/create-symbolic-links-ln-command-4059723](https://www.lifewire.com/create-symbolic-links-ln-command-4059723)  
 [https://www.computerhope.com/unix/uln.htm](https://www.computerhope.com/unix/uln.htm)

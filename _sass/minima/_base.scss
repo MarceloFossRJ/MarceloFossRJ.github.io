@@ -103,13 +103,16 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $brand-color;
   text-decoration: none;
+  font-family: $footer-font-family;
+  @include relative-font-size(0.85);
 
   &:visited {
     color: darken($brand-color, 10%);
   }
 
   &:hover {
-    color: $text-color;
+    //color: $text-color;
+    color: lighten($brand-color, 25%);
     text-decoration: none;
   }
 
