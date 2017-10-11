@@ -1,6 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Patua+One|Suez+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Suez+One');
-@import url('https://fonts.googleapis.com/css?family=PT+Serif:700');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif+Caption:400');
+
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:900');
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+@import url('https://fonts.googleapis.com/css?family=Palanquin:300');
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+@import url('https://fonts.googleapis.com/css?family=Bellefair');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 @charset "utf-8";
 @font-face {
@@ -9,13 +16,18 @@
 }
 
 // Define defaults for each variable.
+$footer-font-family: 'Open Sans', serif; //menu font
+$site-nav-font-family: 'Yantramanav', sans-serif; //menu font
+$author-font-family: 'Yantramanav', sans-serif; //author font
+$header-font-family: 'Vollkorn', serif;//'PT Serif Caption', serif !default; //hearder in the post
+$base-font-family: 'Palanquin', sans-serif !default;//'PT Sans', sans-serif !default;//'Vollkorn', serif !default;  //corpo do post
+//$base-font-family: 'Open Sans', serif !default;  //corpo do post
+$post-font-family: 'Bellefair', serif;
+$post-date-font-family: 'Vollkorn', serif; //título do post
 
-$header-font-family: 'PT Serif', serif !default;
-$base-font-family: 'Open Sans', serif !default;
-$post-font-family: 'Suez One', serif !default;
-$site-title-font-family: 'Monaco' !default;
-$code-font-family: 'Monaco' !default;
-$base-font-size:   16px !default;
+$site-title-font-family: 'Monaco';
+$code-font-family: 'Monaco';
+$base-font-size:   17px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
@@ -23,8 +35,8 @@ $code-font-size:   $base-font-size * 0.875 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
+$text-color:       #000000 !default;
+$background-color: #ffffff !default;
 $brand-color:      #C22222 !default;  //#2a7ae2
 
 $grey-color:       #828282 !default;
@@ -32,7 +44,7 @@ $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
 $footer-color: lighten($grey-color, 46%); //#efefef   #DCDCDC
-$header-color: $grey-color-light;
+$header-color: lighten($grey-color, 46%) !default;
 
 // Width of the content area
 $content-width:    1000px !default;

@@ -4,6 +4,7 @@
 Pre,code {
   font-size: $code-font-size;
   font-family: $code-font-family;
+  @include relative-font-size(0.8);
 }
 
 .highlight {
