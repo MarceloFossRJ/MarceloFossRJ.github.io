@@ -2,7 +2,7 @@
 layout: post
 title:  "Rails naming convention"
 date:   2017-07-20 20:32:34 -0300
-categories: [recipe]
+categories: [guide]
 tags: [ruby, ror]
 author: Marcelo Foss
 ---

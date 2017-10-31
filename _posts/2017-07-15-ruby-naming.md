@@ -2,7 +2,7 @@
 layout: post
 title:  "Ruby naming convention"
 date:   2017-07-15 19:45:31 -0300
-categories: [recipe]
+categories: [guide]
 tags: [ruby]
 author: Marcelo Foss
 ---
