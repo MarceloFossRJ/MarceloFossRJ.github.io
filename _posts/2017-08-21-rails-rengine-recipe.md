@@ -127,21 +127,22 @@ Modify spec/spec_helper.rb to work with the engine file structure:
 ```ruby
 # spec/spec_helper.rb
 ENV["RAILS_ENV"] ||= 'test'
-require File.expand_path("../dummy/config/environment", __FILE__) 
-require 'rspec/rails' 
-require 'rspec/autorun' 
-require 'factory_girl_rails' 
-require 'capybara/rails' 
-require 'capybara/rspec' 
-require 'shoulda/matchers' 
-require 'database_cleaner' 
+require File.expand_path("../dummy/config/environment", __FILE__)
+require 'rspec/rails'
+require 'rspec/autorun'
+require 'factory_girl_rails'
+require 'capybara/rails'
+require 'capybara/rspec'
+require 'shoulda/matchers'
+require 'database_cleaner'
 
+Dir[<<GemName>>::Engine.root.join("spec/support/**/*.rb")].sort.each {|f| require f}
 ENGINE_RAILS_ROOT=File.join(File.dirname(__FILE__), '../')
-Dir[File.join(ENGINE_RAILS_ROOT, "spec/support/**/*.rb")].each {|f| require f }
+Dir[File.join(ENGINE_RAILS_ROOT, "spec/support/**/*.rb")].sort.each {|f| require f }
 
 # Checks for pending migrations before tests are run.  
 # If you are not using ActiveRecord, you can remove this line.
-ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration) 
+ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -156,13 +157,13 @@ RSpec.configure do |config|
   config.profile_examples = nil
   config.order = :random # Run specs in random order to surface order dependencies. If you find
   Kernel.srand config.seed
- 
+
   #Add the following lines to configure database_cleaner
   config.before(:suite) do
      DatabaseCleaner.strategy = :transaction
      DatabaseCleaner.clean_with(:truncation)
   end
- 
+
   config.around(:each) do |example|
      DatabaseCleaner.cleaning do
        example.run
@@ -173,15 +174,15 @@ RSpec.configure do |config|
 
   # Add this line to configure factory_girl
   config.include FactoryGirl::Syntax::Methods # Factory_girl config
- 
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord, fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your examples within a    
   # transaction, remove the following line or assign false instead of true.
   config.use_transactional_fixtures = true
-  
-  # If true, the base class of anonymous controllers will be inferred automatically. 
+
+  # If true, the base class of anonymous controllers will be inferred automatically.
   # This will be the default behavior in future versions of rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
 End
@@ -194,6 +195,8 @@ $mkdir spec/factories
 
 Create the directories to create the rspec tests
 ```
+$mkdir spec/features
+$mkdir spec/support
 $mkdir spec/api
 $mkdir spec/controllers
 $mkdir spec/integration
@@ -220,13 +223,18 @@ module GemName
 End
 ```
 
-Edit the spec/rails_helper.rb to correct the path for the dummy application
+Edit the spec/rails_helper.rb to correct the path for the dummy application and to have RSpec recognizing the rails engine url_helpers
 ```ruby
 # spec/rails_helper.rb
 # Replace the line
-# require File.expand_path("../../config/environment", __FILE__) 
+# require File.expand_path("../../config/environment", __FILE__)
 # to
 require File.expand_path("../dummy/config/environment", __FILE__) ##
+
+
+# Add the following line right after
+# RSpec.configure do |config|
+config.include <<GemName>>::Engine.routes.url_helpers
 ```
 
 #### Test Rspec installation
@@ -296,6 +304,5 @@ ENV["RAILS_ROOT"] ||= File.dirname(__FILE__) + '../../../spec/dummy' ##
 require 'cucumber/rails'
 # Add the following line to use factory_girl
 require 'factory_girl_rails'
-require File.expand_path(File.dirname(__FILE__) + '/../../spec/factories') 
+require File.expand_path(File.dirname(__FILE__) + '/../../spec/factories')
 ```
-

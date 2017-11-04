@@ -14,7 +14,8 @@ https://geemus.gitbooks.io/http-api-design/content/en/artifacts/provide-machine-
 https://github.com/interagent/http-api-design
 https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling
 https://codeplanet.io/principles-good-restful-api-design/
-
+api_doc
+https://pronovix.com/blog/free-and-open-source-api-documentation-tools
 
 #1 – Utilize substantivos e não verbos
 Uma das grandes falhas de padronização ao criar APIs RESTful estão relacionadas ao padrão dos endpoints criados (URLs de acesso aos serviços). O padrão RESTful exige que sejam utilizados substantivos e não verbos ou nomes de métodos. Por exemplo:
@@ -96,5 +97,4 @@ Os 7 passsos acima garantirão que o onboarding (começo do uso da sua API, por 
 
 Uma dica final é você ficar de olho na usabilidade da sua API, com as dicas desse artigo aqui.
 
-E se você curtiu o assunto, e quiser se aprofundar nele, temos o material ideal: o Webinar de Design de APIs RESTful. Confere lá 
-
+E se você curtiu o assunto, e quiser se aprofundar nele, temos o material ideal: o Webinar de Design de APIs RESTful. Confere lá
