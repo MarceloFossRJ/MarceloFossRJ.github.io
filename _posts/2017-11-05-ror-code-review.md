@@ -49,6 +49,9 @@ Rails code review guidelines
 
 [https://www.sitepoint.com/the-importance-of-code-reviews/][https://www.sitepoint.com/the-importance-of-code-reviews/]
 
+mass assigning
+
+https://softwareengineering.stackexchange.com/questions/54814/how-to-evaluate-the-quality-of-rails-code
 
 1. All functions should be between less than 8 lines.
 2. No function should have more than two levels of indent.

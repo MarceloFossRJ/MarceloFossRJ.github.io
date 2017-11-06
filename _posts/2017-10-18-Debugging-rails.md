@@ -2,23 +2,27 @@
 layout: post
 title:  "Debugging Rails applications"
 date:   2017-10-18 19:45:31 -0300
-categories: [article]
+categories: [recipe]
 tags: [ror, gems, debug, assert]
 author: Marcelo Foss
 ---
-# View Helpers for debugging your application
-## debug
-Returns a '<pre' tag that renders the object using the YAML format. This will generate human-readable data from any object.
+From wikipedia:
+*"Debugging is the process of finding and resolving of defects or problem within the program that prevent correct operation of computer software or a system.
 
-## to_yaml
-Calling to_yaml on any object converts it to YAML. You can pass this converted object into the simple_format helper method to format the output.
+Debugging tactics can involve interactive debugging, control flow analysis, unit testing, integration testing, log file analysis, monitoring at the application or system level, memory dumps, and profiling."*
 
-## inspect
-Prints the object value as a string.
+When resolving an issues, there different actions that can be done to find out what is happening, and fix it.
+The use of a debugger and logging are the more effective ones.
+The standard debugger for Rails is Byebug, and is included in Rails 5 project by default.
+The current post is about using a tradutional debugger, Byebug receives most of the focus
+You can check the post for logging at []()
 
-# Debugging with Rails ActiveSupport::Logger
+https://www.sitepoint.com/the-ins-and-outs-of-debugging-ruby-with-byebug/
+http://nofail.de/2013/10/debugging-rails-applications-in-development/
 
 # Using Byebug to debug
+[https://rubyplus.com/articles/3631-Debugging-using-ByeBug-Gem-in-Rails-5][https://rubyplus.com/articles/3631-Debugging-using-ByeBug-Gem-in-Rails-5]
+[https://fleeblewidget.co.uk/2014/05/byebug-cheatsheet/][https://fleeblewidget.co.uk/2014/05/byebug-cheatsheet/]
 When your code is behaving in unexpected ways, you can try printing to logs or the console to diagnose the problem. Unfortunately, there are times when this sort of error tracking is not effective in finding the root cause of a problem. When you actually need to journey into your running source code, the debugger is your best companion.
 
 ## Setup
@@ -349,6 +353,16 @@ edit [file:n]: edit file named file using the editor specified by the EDITOR env
 To exit the debugger, use the quit command (abbreviated to q). Or, type q! to bypass the Really quit? (y/n) prompt and exit unconditionally.
 
 A simple quit tries to terminate all threads in effect. Therefore your server will be stopped and you will have to start it again.
+
+# View Helpers for debugging your application
+## debug
+Returns a '<pre' tag that renders the object using the YAML format. This will generate human-readable data from any object.
+
+## to_yaml
+Calling to_yaml on any object converts it to YAML. You can pass this converted object into the simple_format helper method to format the output.
+
+## inspect
+Prints the object value as a string.
 
 # Debugging with the web-console gem
 Web Console is a bit like byebug, but it runs in the browser. In any page you are developing, you can request a console in the context of a view or a controller. The console would be rendered next to your HTML content.
