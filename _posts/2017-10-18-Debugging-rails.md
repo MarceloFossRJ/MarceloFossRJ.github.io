@@ -17,9 +17,6 @@ The standard debugger for Rails is Byebug, and is included in Rails 5 project by
 The current post is about using a tradutional debugger, Byebug receives most of the focus
 You can check the post for logging at []()
 
-https://www.sitepoint.com/the-ins-and-outs-of-debugging-ruby-with-byebug/
-http://nofail.de/2013/10/debugging-rails-applications-in-development/
-
 # Using Byebug to debug
 [https://rubyplus.com/articles/3631-Debugging-using-ByeBug-Gem-in-Rails-5][https://rubyplus.com/articles/3631-Debugging-using-ByeBug-Gem-in-Rails-5]
 [https://fleeblewidget.co.uk/2014/05/byebug-cheatsheet/][https://fleeblewidget.co.uk/2014/05/byebug-cheatsheet/]
@@ -417,6 +414,10 @@ There are some Rails plugins to help you to find errors and debug your applicati
 * RailsPanel: Chrome extension for Rails development that will end your tailing of development.log. Have all information about your Rails app requests in the browser — in the Developer Tools panel. Provides insight to db/rendering/total times, parameter list, rendered views and more.
 
 * Pry: An IRB alternative and runtime developer console.
+
+# Good reads  
+https://www.sitepoint.com/the-ins-and-outs-of-debugging-ruby-with-byebug/
+http://nofail.de/2013/10/debugging-rails-applications-in-development/
 
 # References
 byebug Homepage
