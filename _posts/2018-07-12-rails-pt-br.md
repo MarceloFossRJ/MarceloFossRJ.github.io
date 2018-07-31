@@ -6,11 +6,18 @@ categories: [article]
 tags: [architecture, rails, ror]
 author: Marcelo Foss
 ---
-https://pt.stackoverflow.com/questions/19512/como-programar-em-português-no-ruby-on-rails
 
-## Mudando a interface para português
+Gostaria de saber como posso programar uma aplicação em Ruby on Rails em português, em vez de inglês.
 
-Crie o arquivo ```config/locales/pt-BR.yml``` e cole lá o seguinte conteúdo:
+Há basicamente três problemas nisso:
+
+Como mudar pra português a interface com o usuário? (Mensagens do erro do ActiveRecord, datas e horas por extenso, etc)
+Como posso fazer a pluralização funcionar em português para eu que possa criar nomes das tabelas e dos controladores em português? (Por exemplo: Usuario em vez de User)
+Como altero as rotas de /edit para /editar e /new para /novo?
+
+## Changing the interface to brazilian-pt
+
+Create the file ```config/locales/pt-BR.yml``` and insert the following:
 
 ```ruby
 pt-BR:
@@ -186,17 +193,20 @@ pt-BR:
         record_invalid: "A validação falhou: %{errors}"
 ```
 
-Depois vá em config/application.rb e adicione o conteúdo abaixo. Isso torna o português do Brasil a linguagem padrão da aplicação.
+## Making brazilian-pt the default language to your application
+Go to ```config/application.rb``` and add the following:
 
+```
+#config/application.rb
 config.i18n.default_locale = :"pt-BR"
 I18n.enforce_available_locales = false
+```
 
+## Changing pluralization to brazilian-pt
 
-## Alterando pluralização para português
+The file ```config/initializers/inflections.rb``` has the responsibility to tell Rails how to pluralize or sigularize names. Add the following:
 
-O arquivo config/initializers/inflections.rb é o responsável em dizer para o Rails como ele deve pluralizar/singularizar os nomes. Altere-o para o seguinte conteúdo:
-
-``` ruby
+```ruby
 # encoding: utf-8
 # Be sure to restart your server when you modify this file.
 
@@ -260,26 +270,44 @@ ActiveSupport::Inflector.inflections do |inflect|
 end
 ```
 
-Porém, ao criar tabelas e controladores com nomes em português, você precisa levar algumas coisas em consideração:
+### Pluralization for non regular words/names
 
-### Nem todas as palavras serão pluralizadas corretamente
+When creating models, controllers or views in brazilian-pt, it is a good practice to see how Rails will pluralize it, to prevent the case of non regular names.   
+Actually that happens in any language, even english.  
+Open Rails console to check it:  
+```
+$ rails c
+```
+For example checkin for the word "Usuario", type the following
+```
+2.3.1 :001 > "usuario".pluralize
+```
+the result should be
+```
+=> "usuarios"
+```
+then type
+```
+2.3.1 :002 > "usuarios".singularize
+```
+the result should be
+```
+ => "usuario"
+```
+To avoid problems and force Rails to make the correct pluralization/singularization
+edit the inflections.rb file like this:
 
-Na verdade isso pode acontecer mesmo programando em inglês. O ideal é abrir o console do Rails na sua aplicação (rails console ou rails c) e conferir a pluralização.
-
-Por exemplo: digite "usuario".pluralize e confira se a saída é "usuarios". Depois digite "usuarios".singularize e confira se a saída é "usuario".
-
-Para evitar problemas, se o Rails estiver pluralizando errado, antes de criar as tabelas e controladores inclua a seguinte linha no inflections.rb para forçar a pluralização correta:
-
+```ruby
 inflect.irregular "usuario", "usuarios"
-Obs.: "usuario" é só um exemplo, na verdade ele já é pluralizado corretamente.
+```
 
-### Cuidado ao criar tabelas e controladores com mais de uma palavra no nome
+### Creating models and controllers with more than one word
 
-A pluralização do Rails funciona levando o inglês em consideração, onde os adjetivos vêm antes dos substantivos. Portanto, ele só vai pluralizar a última palavra do nome.
+Rails pluralization was designed with the English language in mind, where adjectives are placed before nouns, so it will pluralize only the last word of the name.  
+If you want to create a model to store student grades like "NotaDoAluno", Rails will generate the plural to "NotaDoAlunos", which is not really what is wanted.  
+To avoid that it is better than crete the model as "AlunoNota", which Rails will pluralize to "AlunoNotas", which is preferable. The same applies to controllers.  
 
-Se você quiser criar uma tabela de notas do aluno, não crie o modelo como NotaDoAluno pois o Rails vai erradamente pluralizar como NotaDoAlunos. Ao invés disso crie o modelo como AlunoNota, assim ele vai pluralizar como AlunoNotas. Idem para os controladores.
-
-Caso você saiba o que está fazendo, você pode sobrescrever as convenções de nomes de tabelas do Rails e configurar manualmente o nome da tabela daquele modelo:
+You can also verrule the naming conventions of Rails models, and manually configure the table name of that particular model:
 
 ```ruby
 class Product < ActiveRecord::Base
@@ -287,9 +315,9 @@ class Product < ActiveRecord::Base
 end
 ```
 
-### Tabelas many-to-many
+### Many-to-many tables
 
-Às vezes você pode querer criar um modelo para uma relação many-to-many, para poder adicionar mais campos ou métodos. É comum que nesse caso o nome das duas tabelas seja no plural, para isso use no inflections.rb:
+When you need to create a many-to-many relationship, it is common to have the names of the two tables in the plural, to do that edit the ```inflections.rb``` file, so that when executing rails generate, it will create models and controllers with both words in plural.
 
 ```ruby
 inflect.irregular "postagemtag", "postagenstags"
@@ -297,40 +325,43 @@ inflect.irregular "postagem tag", "postagens tags"
 inflect.irregular "postagem_tag", "postagens_tags"
 ```
 
-Assim, ao rodar rails generate, ele vai criar nomes de tabelas e controladores com ambas as palavras no plural, do contrário só a última palavra seria pluralizada.
+## Changing routes to portuguese
 
-## Alterando rotas para português
-
-Isso é fácil, está explicado na documentação oficial. Vai ficar mais ou menos assim:
-
+Edite the routes.rb file:
+```ruby
 resources :usuarios, path_names: { new: "novo", edit: "editar" }
-Ou se você quiser pode alterar vários de uma vez usando scope:
-
+```
+Or using scopes:
 ```ruby
 scope path_names: { new: "novo", edit: "editar" } do
   # seus resources
+
 end
 ```
 
-As variáveis _path não são alteradas, continuam com new e edit. Por exemplo: new_usuario_path e edit_usuario_path(@usuario).
+The path variables are not changed, they are kept as "new" and "edit", for example "new_usuario_path" e "edit_usuario_path(@usuario)" .
 
-Bônus - Configurando Fuso Horário
 
-O Rails por default exibe e guarda no banco as horas no horário UTC.
+## Configuring timezone
 
-Se você quiser que o Rails continue guardando datas/horas no formato UTC, mas converta para o usuário em outro horário, como o de Brasília, use o código abaixo no config/application.rb:
+By default Rails shows and store time int the databse using UTC.
+
+If you want that Rails keep on storing time with UTC format, but convert it to the user in another timezone, like Rio de Janeiro, use the following on ```config/application.rb```:
 
 ```ruby
 config.time_zone = "Brasilia"
 ```
 
-Isso é uma boa ideia se você precisa suportar usuários de países diferentes.
+The is the best if you need to support users from different countries/timezones
 
-Porém se você quiser que o Rails tanto guarde no banco como exiba ao usuário no horário de Brasília, use:
+However, if you wish that Rails stores the timezone like it shows to the user, use:
 
 ```ruby
 config.time_zone = "Brasilia"
 config.active_record.default_timezone = :local
 ```
+That is better when you are using a lagacy database, that uses Brasília timezone, or if you import data from another database directly via SQL and not via ActiveRecord.
 
-Isso é necessário quando você está trabalhando em uma base legada, que usa o horário de Brasília em suas colunas de data e hora. Ou se a base é própria mas você importa dados de outra base direto via SQL, sem ser via ActiveRecord.
+
+# Reference
+[https://pt.stackoverflow.com/questions/19512/como-programar-em-português-no-ruby-on-rails](https://pt.stackoverflow.com/questions/19512/como-programar-em-português-no-ruby-on-rails)
