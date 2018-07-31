@@ -10,7 +10,8 @@ AngularJS
 EmberJS
 BackboneJS
 React
-
+http://natehunzaker.com/javascript/backbone/2011/02/11/learning-backbonejs-chapter-1-a-quick-overview.html
+http://feras.dito.com.br/posts/criando-uma-aplicacao-com-angularjs-e-ruby-on-rails-parte-1/
 http://andrewaustin.com/an-overview-of-angularjs-for-managers/
 
 http://sporto.github.io/blog/2013/04/12/comparison-angular-backbone-can-ember/

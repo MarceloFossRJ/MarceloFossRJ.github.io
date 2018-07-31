@@ -39,3 +39,12 @@ https://medium.com/@fbzga/clean-architecture-in-ruby-7eb3cd0fc145
 https://blog.codeship.com/architecting-rails-apps-as-microservices/
 
 http://adrianmejia.com/blog/2011/08/11/ruby-on-rails-architectural-design/
+
+http://geekhmer.github.io/blog/2016/01/23/rails-5-actioncable-architecture-and-concepts/
+
+https://www.startuprocket.com/articles/how-to-design-and-prep-a-ruby-on-rails-model-architecture
+
+http://www.sarahmei.com/blog/2013/11/11/why-you-should-never-use-mongodb/
+
+
+http://blog.michelada.io/whats-new-in-rails-51

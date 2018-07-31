@@ -6,9 +6,6 @@ categories: [article]
 tags: [ror, gems, log, logging, debug, assert]
 author: Marcelo Foss
 ---
-https://lequangkhai.wordpress.com/2014/10/30/strategies-for-rails-logging-and-error-handling/
-
-http://www.railsonmaui.com/blog/2013/05/08/strategies-for-rails-logging-and-error-handling/
 
 # Logger
 It can also be useful to save information to log files at runtime. Rails maintains a separate log file for each runtime environment.
@@ -94,3 +91,8 @@ https://logentries.com/
 https://www.sumologic.com/pricing/
 https://www.loggly.com/
 https://www.elastic.co/products/logstash
+
+# Good logging reads
+https://lequangkhai.wordpress.com/2014/10/30/strategies-for-rails-logging-and-error-handling/
+
+http://www.railsonmaui.com/blog/2013/05/08/strategies-for-rails-logging-and-error-handling/
