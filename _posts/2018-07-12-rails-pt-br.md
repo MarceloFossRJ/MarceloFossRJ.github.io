@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rails in brazilian portuguese"
-date:   2018-07-13 19:45:31 -0300
+date:   2018-07-12 19:45:31 -0300
 categories: [article]
 tags: [architecture, rails, ror]
 author: Marcelo Foss

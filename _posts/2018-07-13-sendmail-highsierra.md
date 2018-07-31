@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "Configure MacOS-X High Sierra sendmail"
+date:   2018-07-12 14:54:21 -0300
+categories: [recipe]
+tags: [macosx, el capitan, facetime]
+author: Marcelo Foss
+---
+
 # SENDMAIL on MAC OSX Yosemite
 
 #### http://www.garron.me/en/mac/postfix-relay-gmail-mac-os-x-local-smtp.html
