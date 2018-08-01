@@ -7,13 +7,7 @@ tags: [architecture, rails, ror]
 author: Marcelo Foss
 ---
 
-Gostaria de saber como posso programar uma aplicação em Ruby on Rails em português, em vez de inglês.
-
-Há basicamente três problemas nisso:
-
-Como mudar pra português a interface com o usuário? (Mensagens do erro do ActiveRecord, datas e horas por extenso, etc)
-Como posso fazer a pluralização funcionar em português para eu que possa criar nomes das tabelas e dos controladores em português? (Por exemplo: Usuario em vez de User)
-Como altero as rotas de /edit para /editar e /new para /novo?
+This article is about the process of setting up Rails to use localization to brazilian-portuguese (pt-br), i.e., have  ActiveRecord error messsages, hours and dates to brazilian-pt; and to configures the development to use brazilian-pt, i.e., use Rails pluralization/singularization so that models, controllers and views can be creates in pt-br.
 
 ## Changing the interface to brazilian-pt
 
