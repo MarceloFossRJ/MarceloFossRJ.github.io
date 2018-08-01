@@ -24,7 +24,7 @@ Another developer looks over the code and considers questions like:
 So it involves one or more developers examining source code they didn't write and providing feedback to the author, both negative and positive.   
 It should be a part of the team process, and strongly recommended to have it done after having all automated tests passed, and before is merged to working branch.  
 
-It hard, it takes time, but has lots o benefits that pays off, like:
+It is hard, it takes time, but has lots o benefits that pays off, like:
 * Code reviews share knowledge
 * Code reviews make for better estimates
 * Code reviews reduces dependency
@@ -40,18 +40,8 @@ Like mentioned before, do not merge the code to the working branch before doing 
 * Do not use reviews from an audit perspective  
 Using reviews from an audit perspective is not the best approach for the team aura. Use the perspective that the developer should make an extra effort to ensure that the code is following the standards and best practices, that all tests are passing, so the review will go smoothly. That mindfulness also tends to make the coding process itself go smoother and, better and faster.
 
-
-# Some Rails guidelines
-Rails code review guidelines
-[https://github.com/eliotsykes/rails-code-review][https://github.com/eliotsykes/rails-code-review]
-
-[https://blog.planetargon.com/entries/ruby-on-rails-code-audits-8-steps-to-review-your-app][https://blog.planetargon.com/entries/ruby-on-rails-code-audits-8-steps-to-review-your-app]
-
-[https://www.sitepoint.com/the-importance-of-code-reviews/][https://www.sitepoint.com/the-importance-of-code-reviews/]
-
-mass assigning
-
-https://softwareengineering.stackexchange.com/questions/54814/how-to-evaluate-the-quality-of-rails-code
+# What to check
+## General guidelines
 
 1. All functions should be between less than 8 lines.
 2. No function should have more than two levels of indent.
@@ -69,13 +59,22 @@ https://softwareengineering.stackexchange.com/questions/54814/how-to-evaluate-th
 
 As for a quality checklist, I err on the side of beauty:
 
-* Does the code look beautify on the page? (I realize this is subjective, but to someone who "gets it" I maintain it's the best measure of excellence.)
-* Are semantics consistent throughout the project?
-* ActiveModel if appropriate
-* Are migrations used to their full potential?
-* Scopes and relations in the proper context?
-* Uses virtual attributes?
-* Complex object creation is handled in a factory?
-* Effectively uses meta programming to make the project clean and tidy?
-* Views are logic-free?
-* Finally, another subjective but important item - code feels like the developer loves the project and wants to provide it with the best care possible.
+
+## Some Rails guidelines
+1. The look. Does the code look beautify on the page?
+2. Are semantics following a standard, or consistent throughout the project?
+3. Are migrations used to their full potential?
+4. Scopes and relations in the proper context?
+5. Uses virtual attributes?
+6. Complex object creation is handled in a factory?
+7. Effectively uses meta programming to make the project clean and tidy?
+8. Views are logic-free?
+
+## Other Rails code review guidelines
+[https://rails-bestpractices.com](https://rails-bestpractices.com)  
+
+[https://github.com/eliotsykes/rails-code-review][https://github.com/eliotsykes/rails-code-review]  
+
+[https://blog.planetargon.com/entries/ruby-on-rails-code-audits-8-steps-to-review-your-app][https://blog.planetargon.com/entries/ruby-on-rails-code-audits-8-steps-to-review-your-app]  
+
+[https://www.sitepoint.com/the-importance-of-code-reviews/][https://www.sitepoint.com/the-importance-of-code-reviews/]  
