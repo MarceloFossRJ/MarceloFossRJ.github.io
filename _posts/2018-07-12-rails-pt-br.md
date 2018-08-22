@@ -190,7 +190,7 @@ pt-BR:
 ## Making brazilian-pt the default language to your application
 Go to ```config/application.rb``` and add the following:
 
-```
+```ruby
 #config/application.rb
 config.i18n.default_locale = :"pt-BR"
 I18n.enforce_available_locales = false
@@ -356,6 +356,7 @@ config.active_record.default_timezone = :local
 ```
 That is better when you are using a lagacy database, that uses Brasília timezone, or if you import data from another database directly via SQL and not via ActiveRecord.
 
-
 # Reference
+[http://vaidehijoshi.github.io/blog/2015/09/01/inflections-everywhere-using-activesupport-inflector/](http://vaidehijoshi.github.io/blog/2015/09/01/inflections-everywhere-using-activesupport-inflector/)
+
 [https://pt.stackoverflow.com/questions/19512/como-programar-em-português-no-ruby-on-rails](https://pt.stackoverflow.com/questions/19512/como-programar-em-português-no-ruby-on-rails)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rest API style guide"
-date:   2017-10-26 18:44:25 -0300
+date:   2017-10-25 18:44:25 -0300
 categories: [guide]
 tags: [api, rest]
 author: Marcelo Foss
@@ -17,7 +17,7 @@ https://codeplanet.io/principles-good-restful-api-design/
 api_doc
 https://pronovix.com/blog/free-and-open-source-api-documentation-tools
 
-#1 – Utilize substantivos e não verbos
+#1 – Do not use verbs, use NOUNS
 Uma das grandes falhas de padronização ao criar APIs RESTful estão relacionadas ao padrão dos endpoints criados (URLs de acesso aos serviços). O padrão RESTful exige que sejam utilizados substantivos e não verbos ou nomes de métodos. Por exemplo:
 
 ```
