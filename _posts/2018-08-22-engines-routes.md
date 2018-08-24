@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using routes in Rails engines"
-date:   2018-08-222 18:44:25 -0300
+date:   2018-08-22 18:44:25 -0300
 categories: [recipe]
 tags: [rails, engines, routes]
 keywords:
