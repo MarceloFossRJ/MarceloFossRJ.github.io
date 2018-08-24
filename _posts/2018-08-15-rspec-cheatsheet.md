@@ -6,7 +6,7 @@ categories: [cheatsheet]
 tags: [rspec, testing]
 author: Marcelo Foss
 ---
-Ref
+## Reference
 [https://thoughtbot.com/upcase/test-driven-rails-resources/rspec_acceptance.pdf](https://thoughtbot.com/upcase/test-driven-rails-resources/rspec_acceptance.pdf)
 
 #Basic Structure

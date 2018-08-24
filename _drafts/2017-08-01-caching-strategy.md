@@ -14,8 +14,9 @@ Caching is often the most effective way to boost an application's performance. T
 Rails provides a set of caching features out of the box. This guide will teach you the scope and purpose of each one of them. Master these techniques and your Rails applications can serve millions of views without exorbitant response times or server bills."*  
 [http://guides.rubyonrails.org/caching_with_rails.html](http://guides.rubyonrails.org/caching_with_rails.html)
 
-Requests in web applications are expensive, one single page can make several requests to load completely, connections to databases and querying databases is also expensive. API calls are also expensive. How many images and what is the sizes of each one? What about the search? So as you can see there are many aspects to take in consideration before applying any caching strategy.
-First you must have a benchmark or target, then you should analyze how you can speed up page loading in your application.
+Requests in web applications are expensive, one single page can make several requests to load completely, connections to databases and querying databases is also expensive.   
+API calls are also expensive. How many images and what is the sizes of each one? What about the search? So as you can see there are many aspects to take in consideration before applying any caching strategy.
+The first step is to have a target or a benchmark that you need to achieve, then you should analyze how you can speed up page loading in your application, to finally decide what is the best approach to each situation.
 
 # Setting up a target
 
@@ -70,7 +71,6 @@ end
 ```
 
 ## Last-modified
-
 
 An important consideration when implementing ETags and conditional GET in Rails is that by default ETag caches will not be busted when you deploy template changes (unless you update the stock RAILS_CACHE_ID on deploy as well, but this also often means unnecessarily clearing out your fragment caches). You should look to a library like Nathan Kontny’s bust_rails_etags, which overrides the default Rails ETag methods to also take into account an ETAG_VERSION_ID environment variable, which you can set in a way that suits your deployment scheme.
 
