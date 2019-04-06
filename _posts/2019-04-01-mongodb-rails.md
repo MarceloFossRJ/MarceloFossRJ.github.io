@@ -1,7 +1,8 @@
+---
 layout: post
 title:  "MongoDB + RoR Quick Start"
 date:   2019-04-01 19:45:31 -0300
-categories: [reference card]
+categories: [recipe]
 tags: [database, document, nosql, mongodb, rails, ruby, RoR, db]
 author: Marcelo Foss
 ---
