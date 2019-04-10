@@ -63,7 +63,7 @@ rf = RefererParser::Parser.new.parse('http://www.google.com/search?q=gateway+ora
 > rf[:source]
  => "Google"
  ```
-In the controller pass request.referer to the parse method. Save the request.referer in the database and use referer-parser gem to extract details in a background job. This will not work if the user is signed-in to Google.
+In the controller pass `request.referer` to the parse method. Save the `request.referer` in the database and use referer-parser gem to extract details in a background job. This will not work if the user is signed-in to Google.
 
 You will get the error:
 ```
@@ -82,12 +82,12 @@ Use `addressable` gem. Add it to Gemfile.
 ```ruby
 gem 'addressable'
 ```
-The value of request.referer provides the referring domain. The standard URI library in ruby sometimes drops parts of the URL. It also has problems handling special characters in URLs like these: ™ ‘ ’ ° ®. Addressable ruby gem from sporkmonger on git hub is a perfect solution. So use this gem to find the referring domain.
+The value of `request.referer` provides the referring domain. The standard URI library in ruby sometimes drops parts of the URL. It also has problems handling special characters in URLs like these: ™ ‘ ’ ° ®. Addressable ruby gem from sporkmonger on git hub is a perfect solution. So use this gem to find the referring domain.
 ```ruby
 referring_domain = Addressable::URI.parse('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari').host
  => "www.google.com"
  ```
-Save the request.referer in the database. Do this processing in a background job.
+Save the `request.referer` in the database. Do this processing in a background job.
 
 ## Browser Details
 User `browser` gem to extract browser related information.
