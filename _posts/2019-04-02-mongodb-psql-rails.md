@@ -104,7 +104,8 @@ end
 
 ## MongoDb and PostGreSql relationships
 
-* Define how `user.rb` will use phone:
+* Define how `user.rb` will use phone:  
+
 ```ruby
 class User < ActiveRecord::Base
 
@@ -123,7 +124,8 @@ class User < ActiveRecord::Base
 end
 ```
 
-* Define how `phone.rb` will use user:
+* Define how `phone.rb` will use user:   
+
 ```ruby
 class Phone
   include Mongoid::Document
