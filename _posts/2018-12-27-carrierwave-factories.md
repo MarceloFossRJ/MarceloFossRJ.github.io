@@ -86,9 +86,3 @@ RSpec.configure do |config|
   end
 end
 ```
-
-https://axiomq.com/blog/rspec-and-factorygirl-setup-for-testing-carrierwave-uploaders/
-
-https://til.codes/testing-carrierwave-file-uploads-with-rspec-and-factorygirl/
-
-https://github.com/carrierwaveuploader/carrierwave/wiki/How-to:-Use-test-factories

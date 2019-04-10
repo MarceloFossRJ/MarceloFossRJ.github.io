@@ -6,7 +6,7 @@ categories: [article]
 tags: [web analytics, web, rails, ruby]
 author: Marcelo Foss
 ---
-This is a very good article 'User Analytics for Rails Apps' written by Bala Paranj at Rubyplus.com, here is the link of the original post: (https://rubyplus.com/articles/4051-User-Analytics-for-Rails-Apps)[https://rubyplus.com/articles/4051-User-Analytics-for-Rails-Apps]
+This is a very good article *'User Analytics for Rails Apps'* written by **Bala Paranj** at *Rubyplus.com*, here is the link of the original post: [https://rubyplus.com/articles/4051-User-Analytics-for-Rails-Apps](https://rubyplus.com/articles/4051-User-Analytics-for-Rails-Apps)
 
 ## Getting IP Address
 * Extract the IP from the request in the controller:
@@ -177,7 +177,7 @@ You can use `user_agent_parser` gem.
 These tips are based on the source code of ahoy_matey gem. It uses user_agent_parser gem to find the browser name and the OS. We can use the browser gem to give us that information.
 
 ## References
-(referer-parser gem)[https://github.com/snowplow/referer-parser]
-(Geocoder Gem)[https://github.com/alexreisner/geocoder]
-(Browser Gem)[https://github.com/fnando/browser]
-(Replacing Ruby's URI with Addressable)[http://cloudspace.com/blog/2009/05/26/replacing-rubys-uri-with-addressable/#.V0CF8SMrKgs]
+[referer-parser gem](https://github.com/snowplow/referer-parser)
+[Geocoder Gem](https://github.com/alexreisner/geocoder)
+[Browser Gem](https://github.com/fnando/browser)
+[Replacing Ruby's URI with Addressable](http://cloudspace.com/blog/2009/05/26/replacing-rubys-uri-with-addressable/#.V0CF8SMrKgs)

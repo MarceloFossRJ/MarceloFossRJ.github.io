@@ -122,8 +122,8 @@ end
 ```
 
 ### Interesting reference about Rake
-(https://medium.com/@sampatbadhe/rake-task-invoke-or-execute-419cd689c3bd)[https://medium.com/@sampatbadhe/rake-task-invoke-or-execute-419cd689c3bd]
+[https://medium.com/@sampatbadhe/rake-task-invoke-or-execute-419cd689c3bd](https://medium.com/@sampatbadhe/rake-task-invoke-or-execute-419cd689c3bd)
 
-(https://www.stuartellis.name/articles/rake/)[https://www.stuartellis.name/articles/rake/]
+[https://www.stuartellis.name/articles/rake/](https://www.stuartellis.name/articles/rake/)
 
-(http://tutorials.jumpstartlab.com/topics/systems/automation.html)[http://tutorials.jumpstartlab.com/topics/systems/automation.html]
+[http://tutorials.jumpstartlab.com/topics/systems/automation.html](http://tutorials.jumpstartlab.com/topics/systems/automation.html)
