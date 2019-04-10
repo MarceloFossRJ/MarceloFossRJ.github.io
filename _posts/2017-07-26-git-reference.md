@@ -3,7 +3,7 @@ layout: post
 title:  "Git reference card"
 date:   2017-07-26 18:44:25 -0300
 categories: [reference card]
-tags: [git, github]
+tags: [git, github, version control]
 author: Marcelo Foss
 ---
 Git is a distributed version control system that uses a local repository and a remote repository.  
