@@ -177,7 +177,7 @@ You can use `user_agent_parser` gem.
 These tips are based on the source code of ahoy_matey gem. It uses user_agent_parser gem to find the browser name and the OS. We can use the browser gem to give us that information.
 
 ## References
-[referer-parser gem](https://github.com/snowplow/referer-parser)  
-[Geocoder Gem](https://github.com/alexreisner/geocoder)  
-[Browser Gem](https://github.com/fnando/browser)  
-[Replacing Ruby's URI with Addressable](http://cloudspace.com/blog/2009/05/26/replacing-rubys-uri-with-addressable/#.V0CF8SMrKgs)  
+[referer-parser gem](https://github.com/snowplow/referer-parser){:target="_blank"}  
+[Geocoder Gem](https://github.com/alexreisner/geocoder){:target="_blank"}  
+[Browser Gem](https://github.com/fnando/browser){:target="_blank"}  
+[Replacing Ruby's URI with Addressable](http://cloudspace.com/blog/2009/05/26/replacing-rubys-uri-with-addressable#.XK5eGS-ZPOQ){:target="_blank"}  
