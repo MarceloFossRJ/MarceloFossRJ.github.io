@@ -110,7 +110,8 @@ field :description, localize: true
 index “description.de” => 1
 index “description.en” => 1
 ```
-* Relations
+* Relations  
+
 ```ruby
 class User
 include Mongoid::Document

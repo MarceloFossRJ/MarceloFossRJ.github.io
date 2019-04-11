@@ -4,7 +4,7 @@ title: About/Contact
 permalink: /about/
 ---
 
-My name is Marcelo Foss, you can find me in the web and social networks also with the usernames marcelo.foss.rj or marcelofossrj; 
+My name is Marcelo Foss, you can find me in the web and social networks also with the usernames marcelo.foss.rj or marcelofossrj;
 I graduated from college as chemical engineer, but evolved a career in IT, mainly developing software. I would say that I am a software creator and chemical engineer that likes to take pictures.
 
 I created the DevRecipes.blog to archive programming recipes, reference cards and cheat sheets that I use. Later I realized that would be a nice place to also my thoughts and convictions about the art of creating software.
@@ -17,7 +17,7 @@ My biggest interest is on the production of useful and efficient software system
 I enjoy to architect, design and write enterprise class software, and the processes that support its development.
 I do value lightweight agile processes, BDD, and good design. But above all: shipping
 
-Lately I am focusing mostly in Ruby & RoR, and Javascript & AngularJS.
+Lately I am focusing mostly in Semantic Analysys and NLP(Natural Language Processing) in Python, as well as web scraping with Golang, but I still do not abandon the good old Ruby & RoR.
 You can check some work at github at [http://github.com/marcelofossrj](http://github.com/marcelofossrj)
 
 I do consulting work, so feel free to get in touch if you want to discuss potential projects or need any help.
