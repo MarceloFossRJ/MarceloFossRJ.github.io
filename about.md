@@ -10,7 +10,7 @@ I graduated from college as chemical engineer, but evolved a career in IT, mainl
 I created the DevRecipes.blog to archive programming recipes, reference cards and cheat sheets that I use. Later I realized that would be a nice place to also my thoughts and convictions about the art of creating software.
 
 I've been working in software development for a while, and touched many things in it.
-From software developer to IT Manager, from solution architect to hiring a distributed team, from leading international teams to designing data migrations.
+From software developer to IT Manager, from solution architect to hiring a distributed team, from leading international teams to perform functional analysis.
 
 My biggest interest is on the production of useful and efficient software systems, as well as, improving how it is delivered, and to maximize the productivity of software development teams.
 
