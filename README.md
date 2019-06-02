@@ -1,9 +1,10 @@
 # MarceloFossRJ Blog
-My name is Marcelo Foss, you will find me in the web with the nickname aka marcelo.foss.rj or marcelofossrj or marcelofoss.
-
-At the university I received a chemical engineer diploma, but my professional career evolved in IT. I have been working in the software development and ICT management as well as the process optimization arena for over 20 years Over this time, I was able to help many companies in various industries: finance, publishing, consumers, health insurance and education.
+This the repository for the [http://marcelofossrj.github.io]([http://marcelofossrj.github.io), owned by Marcelo Foss,
+alson found in the web with the nickname aka marcelo.foss.rj or marcelofossrj or marcelofoss.
 
 The DevRecipes.blog was created to archive programming recipes, snippets, reference cards and cheat sheets that I use. Later I realized that would be a nice place to also my thoughts and convictions about the art of creating software. Maybe I make some posts about it, but this is not the goal here.
+
+At the university I received a chemical engineer diploma, but my professional career evolved in IT. I have been working in the software development and ICT management as well as the process optimization arena for over 20 years Over this time, I was able to help many companies in various industries: finance, publishing, consumers, health insurance and education.
 
 Professionally, my focus is in leadership and creation of high-performance teams and high effective software solutions through Agile methods.
 
