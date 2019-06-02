@@ -12,7 +12,6 @@ intro: |
 
 ## PSQL
 
-Magic words:
 ```bash
 psql -U postgres
 ```
@@ -149,3 +148,14 @@ $ source $HOME/.editrc
 ```
 - [PostgreSQL Exercises](https://pgexercises.com/): An awesome resource to learn to learn SQL, teaching you with simple examples in a great visual way. **Highly recommended**.
 - [A Performance Cheat Sheet for PostgreSQL](https://severalnines.com/blog/performance-cheat-sheet-postgresql): Great explanations of `EXPLAIN`, `EXPLAIN ANALYZE`, `VACUUM`, configuration parameters and more. Quite interesting if you need to tune-up a postgres setup.
+
+
+
+
+foss=# create user instadwldr with password '@insta2019!';
+CREATE ROLE
+foss=# grant all privileges on database instadwldr_test to instadwldr;
+GRANT
+foss=# grant all privileges on database instadwldr_development to instadwldr;
+GRANT
+foss=# alter user instadwldr createdb;
