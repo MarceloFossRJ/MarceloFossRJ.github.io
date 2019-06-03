@@ -4,8 +4,8 @@ title: About/Contact
 permalink: /about/
 ---
 
-# MarceloFossRJ Blog
-My name is Marcelo Foss, you will find me in the web with the nickname aka marcelo.foss.rj or marcelofossrj or marcelofoss.
+# MarceloFossRJ 
+My name is Marcelo Foss, you will find me in the web with the nickname marcelo.foss.rj or marcelofossrj or marcelofoss.
 
 At the university I received a chemical engineer diploma, but my professional career evolved in IT. I have been working in the software development and ICT management as well as the process optimization arena for over 20 years. Over this time, I was able to help many companies in various industries: finance, publishing, consumers, health insurance and education.
 
