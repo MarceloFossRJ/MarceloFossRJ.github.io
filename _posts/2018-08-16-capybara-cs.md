@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Capybara Cheat Sheet
-date:   2018-12-27 18:44:25 -0300
+date:   2018-08-16 18:44:25 -0300
 category: [cheatsheet]
 tags: [rspec, capybara, deply, deployment, release, cheatsheet, test, testing, tdd]
 author: Marcelo Foss
