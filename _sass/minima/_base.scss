@@ -240,3 +240,27 @@ article .two-column {
 	-moz-column-count: 2; /* Firefox */
 	column-count: 2;
 }
+/* ***************************
+ * Fixed top Menbu - MFO
+ * ***************************/
+ body {
+   padding-top: 60px;
+ }
+ nav {
+   position: fixed;
+   top: 0;
+ }
+.site-nav {
+  right: 0;
+  margin-right: 20vw;
+  @include media-query($on-laptop) {
+    margin-right: 10vw;
+  }
+  @include media-query($on-palm) {
+    margin-right: 3vw;
+  }
+}
+.top-nav{
+  left: 0;
+  right: 0;
+}
