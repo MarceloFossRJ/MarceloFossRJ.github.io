@@ -3,7 +3,7 @@ layout: post
 title: Capybara Cheat Sheet
 date:   2018-08-16 18:44:25 -0300
 category: [cheatsheet]
-tags: [rspec, capybara, deply, deployment, release, cheatsheet, test, testing, tdd]
+tags: [rspec, capybara, deploy, deployment, release, cheatsheet, test, testing, tdd]
 author: Marcelo Foss
 intro: |
   [Capybara](https://github.com/capistrano/capistrano) is a framework for building automated deployment scripts. Although Capistrano itself is written in Ruby, it can easily be used to deploy projects of any language or framework, be it Rails, Java, or PHP.
