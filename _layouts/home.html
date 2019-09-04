@@ -10,13 +10,12 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
+      <li class="post-box">
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-
+        <div class="post-content">
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
-
         <span class="post-meta-home">{{ post.date | date: date_format }}</span>
         {% if post.author %}
         	<i class="post-meta-home">by</i>&nbsp;
@@ -24,7 +23,7 @@ layout: default
 				        <span itemprop="name" class="post-author-home">{{ post.author }}</span>
 			    </span>
       	{% endif %}
-
+        </div>
       </li>
     {% endfor %}
   </ul>

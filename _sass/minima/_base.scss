@@ -317,23 +317,56 @@ article .two-column {
   color: $grey-color-dark;
 }
 
+/* width of the drop-down */
 .search-results {
-  list-style-type: none;
   width:300px;
 }
+/* styling of the drop-down out box */
 .search-results-ul {
   list-style-type: none;
   background-color: $grey-color-light;
   height: auto;
   position: relative;
 }
-
+/* correct positioning of the search drop-down */
 .search-results-pos {
   left: -32px;
   top: -15px;
+  @include media-query($on-palm) {
+    left: 0px;
+  }
 }
-
+/* styling of each item in the drop-down */
 .search-results-ul li {
   padding-left: 5px;
   border: 1px solid $grey-color;
+}
+
+.post-box {
+  width: 70%;
+  max-width: 100%;
+  @include media-query($on-laptop) {
+    width: 90%;
+  }
+  @include media-query($on-palm) {
+    width: 100%;
+  }
+  /* margin-bottom: .5rem; */
+  display: flex;
+  flex-direction: row;
+  /* align-items: stretch; */
+  min-height: 3rem;
+  max-height: 4.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all .3s ease;
+  box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
+  &:hover {
+    transform: translate(0px, -2px);
+    box-shadow: 0 15px 35px -10px rgba(10, 16, 34, .2);
+  }
+
+  .post-content {
+    padding: 1rem;
+  }
 }
