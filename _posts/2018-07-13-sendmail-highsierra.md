@@ -3,7 +3,7 @@ layout: post
 title:  "Configure MacOS-X High Sierra sendmail"
 date:   2018-07-12 14:54:21 -0300
 categories: [recipe]
-tags: [macosx, el capitan, facetime]
+tags: [macosx, high sierra, facetime, email, sendmail]
 author: Marcelo Foss
 ---
 

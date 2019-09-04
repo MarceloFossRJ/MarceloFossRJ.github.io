@@ -3,7 +3,7 @@ layout: post
 title:  "Rails code review"
 date:   2017-11-05 19:45:31 -0300
 categories: [article]
-tags: [ror, code review, code quality]
+tags: [ror, rails, code review, code quality]
 author: Marcelo Foss
 ---
 # Code reviews?

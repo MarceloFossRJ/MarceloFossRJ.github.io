@@ -3,7 +3,7 @@ layout: post
 title:  "Rails db:migrate reference card"
 date:   2017-07-24 17:12:01 -0300
 categories: [reference card]
-tags: [ror]
+tags: [ror, rails, ruby, migration, database]
 author: Marcelo Foss
 ---
 ### Creating migrations
@@ -14,7 +14,7 @@ $bin/rails generate migration AddPartNumberToProducts
 If the migration name is of the form "AddXXXToYYY" or "RemoveXXXFromYYY" and is followed by a list of column names and types then a migration containing the appropriate add_column and remove_column statements will be created.
 
 Commands to create migrations  
-``` 
+```
 $rails generate model Product name:string description:text
 $rails generate migration AddPartNumberToProducts part_number:string
 $rails generate migration RemovePartNumberFromProducts part_number:string
@@ -48,7 +48,7 @@ $rails generate migration AddDetailsToProducts part_number:string price:decimal
 * :timestamp
 especial type:
 * :references
-	
+
 To Add a column to a table
 ```
 class AddPartNumberToProducts < ActiveRecord::Migration[5.0]
@@ -67,7 +67,7 @@ class RemovePartNumberFromProducts < ActiveRecord::Migration[5.0]
 end
 ```
 
-### DB Rake tasks : 
+### DB Rake tasks :
 Execute:  
 ```
 rake -T db
@@ -76,13 +76,13 @@ rake -T db
 * **db:migrate:up** - runs one specific migration
 * **db:migrate:down** - rolls back one specific migration
 * **db:migrate:status** - shows current migration status
-  
+
 * **db:create** - creates the database for the current env
 * **db:create:all** - creates the databases for all envs
-  
+
 * **db:drop** - drops the database for the current env
 * **db:drop:all** - drops the databases for all envs
-  
+
 * **db:rollback** - rolls back the last migration (specify steps w/ STEP=n)
 * **db:forward** - advances the current schema version to the next one
 * **db:seed** - (only) runs the db/seed.rb file
@@ -107,4 +107,3 @@ $rake db:migrate:up VERSION=20080906120000
 
 Further information at:  
 [http://guides.rubyonrails.org/migrations.html](http://guides.rubyonrails.org/migrations.html)
-

@@ -3,10 +3,7 @@ layout: post
 title:  "Using routes in Rails engines"
 date:   2018-08-22 18:44:25 -0300
 categories: [recipe]
-tags: [rails, engines, routes]
-keywords:
-  - "Ror engines"
-  - "rails engines routes"
+tags: [rails, engines, routes, ror]
 author: Marcelo Foss
 intro: |
   No matter if you are writing a component based application in RoR, or if you are just using a gem in your project, if that gem do provide their own views, there is a big probability that you will want to override the engine routes.

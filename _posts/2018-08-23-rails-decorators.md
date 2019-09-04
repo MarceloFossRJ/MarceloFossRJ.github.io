@@ -3,15 +3,10 @@ layout: post
 title:  "Decorator pattern in Rails engines"
 date:   2018-08-23 18:44:25 -0300
 categories: [recipe]
-tags: [rails, engines, patterns, decorator]
-keywords:
-  - "Ror engines"
-  - "rails engines decorator"
-  - "first_name 'John'"
-  - "sequence(:username) { |n| \"user#{n}\" }"
+tags: [rails, engines, patterns, decorator, ror]
 author: Marcelo Foss
 intro: |
-  No matter if you are writing a component based application in RoR, or if you are just using a gem in your project, there is a big probability that you are going to need to extend some gem/engine classes. 
+  No matter if you are writing a component based application in RoR, or if you are just using a gem in your project, there is a big probability that you are going to need to extend some gem/engine classes.
 ---
 
 No matter if you are writing a component based application in RoR, or if you are just using a gem in your project, there is a big probability that you are going to need to extend some gem/engine classes.  

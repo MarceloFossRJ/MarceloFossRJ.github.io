@@ -3,7 +3,7 @@ layout: post
 title:  "Ruby naming convention"
 date:   2017-07-15 19:45:31 -0300
 categories: [guide]
-tags: [ruby]
+tags: [ruby, standard]
 author: Marcelo Foss
 ---
 Ruby uses a unique convention for naming objects:

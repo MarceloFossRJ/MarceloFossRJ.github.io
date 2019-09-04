@@ -3,7 +3,7 @@ layout: post
 title:  "The RVM Recipe"
 date:   2017-07-24 17:12:01 -0300
 categories: [recipe]
-tags: []
+tags: [ruby, rails, devops]
 author: Marcelo Foss
 ---
 Ruby Version Manager, aka RVM, is a command line tool designed to manage multiple installations of Ruby on the same device.

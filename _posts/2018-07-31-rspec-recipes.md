@@ -3,7 +3,7 @@ layout: post
 title:  "RSpec recipes"
 date:   2018-07-31 09:15:54 -0300
 categories: [recipe]
-tags: [ruby, ror, test, bdd, tdd, rspec]
+tags: [ruby, ror, test, bdd, tdd, rspec, rails]
 author: Marcelo Foss
 ---
 

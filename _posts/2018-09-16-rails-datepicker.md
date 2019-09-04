@@ -1,10 +1,9 @@
-
 ---
 layout: post
-title: Vim CheatSheet
-date:   2018-08-25 18:44:25 -0300
-category: [cheatsheet]
-tags: [vim, cheatsheet]
+title: Rails datepicker
+date:   2018-08-25 09:44:25 -0300
+category: [recipe]
+tags: [rails, ror, datepicker, javascript]
 author: Marcelo Foss
 intro: |
   [Vim](http://www.vim.org/) is a very efficient text editor. This reference was made for Vim 8.0.

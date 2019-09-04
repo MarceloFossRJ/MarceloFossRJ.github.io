@@ -3,7 +3,7 @@ layout: post
 title:  "Rails naming convention"
 date:   2017-07-20 20:32:34 -0300
 categories: [guide]
-tags: [ruby, ror]
+tags: [ruby, ror, rails, standard]
 author: Marcelo Foss
 ---
 

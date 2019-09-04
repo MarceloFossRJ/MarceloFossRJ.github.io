@@ -3,12 +3,7 @@ layout: post
 title:  "FactoryBot Cheat Sheet"
 date:   2018-08-15 13:44:25 -0300
 categories: [cheatsheet]
-tags: [rspec, testing]
-keywords:
-  - "FactoryBot.define do"
-  - "factory :user"
-  - "first_name 'John'"
-  - "sequence(:username) { |n| \"user#{n}\" }"
+tags: [rspec, testing, factory_bot, rails]
 author: Marcelo Foss
 intro: |
   [Factory Bot](http://www.rubydoc.info/gems/factory_bot/) is a helper for writing factories for Ruby tests.

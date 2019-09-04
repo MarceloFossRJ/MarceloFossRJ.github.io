@@ -3,7 +3,7 @@ layout: post
 title: Capistrano recipes
 date:   2018-10-20 18:44:25 -0300
 category: [recipe]
-tags: [deploy, capistrano, rake, deployment, release]
+tags: [deploy, capistrano, rake, deployment, release, ruby]
 author: Marcelo Foss
 intro: |
   [Capistrano](https://github.com/capistrano/capistrano) is a framework for building automated deployment scripts. Although Capistrano itself is written in Ruby, it can easily be used to deploy projects of any language or framework, be it Rails, Java, or PHP.
