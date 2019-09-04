@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enzymes Naming and classification
-date:   2018-08-08 18:44:25 -0300
+date:   2019-08-08 18:44:25 -0300
 category: [article]
 tags: [Microbiology, Enzymes, Chemistry, Biochemistry]
 author: Marcelo Foss
@@ -9,7 +9,7 @@ intro: |
   Enzymes naming and classification
 ---
 ## Enzymes
-Enzymes are macromolecular biological catalysts that accelerate chemical reactions. The molecules upon which enzymes may act are called substrates, and the enzyme converts the substrates into different molecules known as products. 
+Enzymes are macromolecular biological catalysts that accelerate chemical reactions. The molecules upon which enzymes may act are called substrates, and the enzyme converts the substrates into different molecules known as products.
 
 ## Naming and Classification
 Except for some of the originally studied enzymes such as pepsin, rennin, and trypsin, most enzyme names end in "ase". The International Union of Biochemistry (I.U.B.) initiated standards of enzyme nomenclature which recommend that enzyme names indicate both the substrate acted upon and the type of reaction catalyzed. Under this system, the enzyme uricase is called urate: O2 oxidoreductase, while the enzyme glutamic oxaloacetic transaminase (GOT) is called L-aspartate: 2-oxoglutarate aminotransferase.
