@@ -6,7 +6,7 @@ categories: [article]
 tags: [web analytics, web, rails, ruby]
 author: Marcelo Foss
 ---
-This is a very good article *'User Analytics for Rails Apps'* written by **Bala Paranj** at *Rubyplus.com*, here is the link of the original post: [https://rubyplus.com/articles/4051-User-Analytics-for-Rails-Apps](https://rubyplus.com/articles/4051-User-Analytics-for-Rails-Apps)
+Very interesting article *'User Analytics for Rails Apps'* written by **Bala Paranj** at *Rubyplus.com*, here is the link of the original post: [https://rubyplus.com/articles/4051-User-Analytics-for-Rails-Apps](https://rubyplus.com/articles/4051-User-Analytics-for-Rails-Apps)
 
 ## Getting IP Address
 * Extract the IP from the request in the controller:

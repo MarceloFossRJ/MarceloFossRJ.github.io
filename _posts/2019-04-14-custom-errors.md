@@ -1,18 +1,14 @@
 ---
 layout: post
 title: Custom rails error pages
-date:   2018-04-14 18:44:25 -0300
+date:   2019-04-14 18:44:25 -0300
 category: [recipe]
 tags: [Rails, Ruby, Error, Exception]
 author: Marcelo Foss
 intro: |
   How to handle nice error pages in an Rails application.
 ---
-# Custom error pages for Rails apps
-Normally, 404 and 500 error pages are static HTML files that live in the public directory of a Rails application. These are boring, minimally-styled pages that don’t get the same treatment as the rest of the app. This tutorial shows you how to move error pages into your Rails app as dynamic views that benefit from application styles, layouts, and view helpers.
-
-There are different options to render a custom merror page in your Rails app. My option is for dynamic error pages.
-
+Normally, 404 and 500 error pages are static HTML files in the public directory of a Rails app. These are minimally-styled pages that don’t get the same treatment as the rest of the app. There are different options to render a custom error page in your Rails app. My option is for dynamic error pages.
 
 ## Dynamic error pages
 
@@ -34,8 +30,8 @@ Add some routes for each error type
  get "/422", to: "errors#unacceptable", :via => :all
  get "/500", to: "errors#internal_error", :via => :all
 ```
-Create an ErrorsController. Because Void is API based I also take care to render JSON error responses
-```
+Create an ErrorsController. Take care to render JSON error responses also, so it is API friendly.
+``` ruby
  class ErrorsController < ApplicationController
    before_action :set_status
 
@@ -66,8 +62,9 @@ Create an ErrorsController. Because Void is API based I also take care to render
    end
  end
  ```
-Create views for each error action app/views/errors/{internal_error,not_found,unacceptable}.html.erb
-```
+Create views for each error action
+``` ruby
+# app/views/errors/{internal_error,not_found,unacceptable}.html.erb
  <!-- example app/views/errors/not_found.html.erb -->
  <h1>Page not found</h1>
  <p>Whoops we couldn’t find the page you were looking for!</p>
@@ -82,27 +79,21 @@ $ heroku config:set \
   MAINTENANCE_PAGE_URL=//s3.amazonaws.com/<your_bucket>/your_maintenance_page.html
 ```
 
-## DRAWBACKS
-Dynamic error pages let us use the power of the Rails view layer, but this has its own drawbacks.
+## Drawbacks
+If the error page has any error, users will have difficulty to interact with the app, and to see the error page. Rails recognizes this situation an avoid an infinite loop. As a last resort, Rails will display a simple plaintext error message:
 
-If the error page has errors. Syntax errors, database outages, or other catastrophes can lead to dynamic error pages that themselves fail to render. If this happens, not only can’t users interact with your app, they won’t be able to see your fancy error page!
-
-Luckily Rails is smart enough to recognize this situation an avoid an infinite loop. As a last resort, Rails will display a simple plaintext error message:
-
+```
 500 Internal Server Error
+```
 
-If you are the administrator of this website, then please read this web application’s log file and/or the web server’s log file to find out what went wrong.
-
-If Rails has completely crashed. When a Rails application is proxied by a web server like Nginx, the web server can be configured to serve static files from public/. Theoretically, if your Rails application completely crashed, Nginx could still serve a static error page, like public/500.html.
+If Rails has completely crashed. When a Rails application is proxied by a web server like Nginx, the web server can be configured to serve static files from ```public/```. Theoretically, if your Rails application completely crashed, Nginx could still serve a static error page, like ```public/500.html```.
 
 But with dynamic error pages this is not possible. By definition, Rails has to be up and running in order for those error pages to be displayed. You’ll need a static error page for this scenario.
 
-So let’s generate one!
+## Auto-generating a static error page with Capistrano
+Assuming you deploy using Capistrano 3, you can use Capistrano to also generate a static ```public/500.html``` page whenever your application is deployed. With proper Nginix configuration, this error page can be served even in the unfortunate scenario when your Rails app is completely offline.
 
-## BONUS: AUTO-GENERATING A STATIC ERROR PAGE WITH CAPISTRANO
-Assuming you deploy using Capistrano 3, you can use Capistrano to also generate a static public/500.html page whenever your application is deployed. With proper Nginix configuration, this error page can be served even in the unfortunate scenario when your Rails app is completely offline.
-
-1 DEFINE A CAPISTRANO TASK
+1. Define a Capistrno task
 ```
 task :generate_500_html do
   on roles(:web) do |host|
@@ -112,7 +103,7 @@ task :generate_500_html do
 end
 after "deploy:published", :generate_500_html
 ```
-This instructs Capistrano to request the /500 route of your application and save the resulting HTML to public/500.html. This happens on every successful deploy. Now your app has a static 500 error page that looks just like your dymamic one, automatically!
+This instructs Capistrano to request the ```/500``` route of your application and save the resulting HTML to ```public/500.html```. This happens on every successful deploy. Now your app has a static 500 error page that looks just like your dymamic one, automatically!
 
 [https://mattbrictson.com/dynamic-rails-error-pages](https://mattbrictson.com/dynamic-rails-error-pages)
 [https://pooreffort.com/blog/custom-rails-error-pages/](https://pooreffort.com/blog/custom-rails-error-pages/)

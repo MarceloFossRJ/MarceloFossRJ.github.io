@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MongoDB + RoR Quick Start"
-date:   2019-04-01 19:45:31 -0300
+date:   2019-04-02 19:45:31 -0300
 categories: [recipe]
 tags: [database, document, nosql, mongodb, rails, ruby, RoR, db]
 author: Marcelo Foss
@@ -56,8 +56,7 @@ development:
         # read:
         #   mode: :secondary_preferred
         #   tag_sets:
-        #     - use: web
- seconds.
+        #     - use: web        
         # (default: 5)
         # connect_timeout: 5
 
@@ -65,8 +64,7 @@ development:
         # (default: 5)
         # socket_timeout: 5
 
-        # The name of the replica set to connect to. Servers provided as seeds that do
-      certifications
+        # The name of the replica set to connect to. Servers provided as seeds that do certifications
   options:
 test:
   clients:
@@ -81,7 +79,7 @@ test:
 ```
 
 ## MongoDB Data Modelling
-The key point to note here is it not inheriting from ActiveRecord. Documents are the core objects in Mongoid and any object that is to be persisted to the database must include Mongoid::Document which can be seen below:
+The key point to note here, is that it doesn't inherits from ActiveRecord. Documents are the core objects in Mongoid and any object that is to be persisted to the database must include Mongoid::Document which can be seen below:
 
 ### MongoDB based model
 ```ruby
