@@ -241,7 +241,7 @@ article .two-column {
 	column-count: 2;
 }
 /* ***************************
- * Fixed top Menbu - MFO
+ * Fixed top Menu - MFO
  * ***************************/
  body {
    padding-top: 60px;
@@ -252,12 +252,12 @@ article .two-column {
  }
 .site-nav {
   right: 0;
-  margin-right: 20vw;
+  margin-right: 18vw;
   @include media-query($on-laptop) {
-    margin-right: 10vw;
+    margin-right: 1vw;
   }
   @include media-query($on-palm) {
-    margin-right: 3vw;
+    margin-right: 1vw;
   }
 }
 .top-nav{
@@ -343,10 +343,10 @@ article .two-column {
 }
 
 .post-box {
-  width: 70%;
+  width: 85%;
   max-width: 100%;
   @include media-query($on-laptop) {
-    width: 90%;
+    width: 100%;
   }
   @include media-query($on-palm) {
     width: 100%;
