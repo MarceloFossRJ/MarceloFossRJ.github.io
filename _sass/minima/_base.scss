@@ -277,12 +277,15 @@ article .two-column {
 
 /* Input field that looks like a button */
 .search {
-	width: 120px;
+	width: 150px;
+  @include media-query($on-palm) {
+    width: 280px;
+  }
 	display: inline-block;
 	color: black;
 	text-align: left;
 	background-color: $grey-color-light;
-	padding: .5em 1.0em;
+	padding: .5em;
 	border: none;
 	cursor: pointer;
 	outline: none;
@@ -298,14 +301,7 @@ article .two-column {
   color: white;
 }
 
-/* after button is clicked */
-.search.active {
-	width: 200px;
-	outline: none;
-	color: #efaa9d;
-	text-align: left;
-	cursor: inherit;
-}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: $grey-color-dark;
   opacity: 1; /* Firefox */
@@ -344,7 +340,6 @@ article .two-column {
 
 .post-box {
   width: 85%;
-  max-width: 100%;
   @include media-query($on-laptop) {
     width: 100%;
   }
@@ -355,8 +350,8 @@ article .two-column {
   display: flex;
   flex-direction: row;
   /* align-items: stretch; */
-  min-height: 3rem;
-  max-height: 4.5rem;
+  height: auto;
+  /*min-height: 3rem;*/
   border-radius: 5px;
   overflow: hidden;
   transition: all .3s ease;
@@ -365,8 +360,7 @@ article .two-column {
     transform: translate(0px, -2px);
     box-shadow: 0 15px 35px -10px rgba(10, 16, 34, .2);
   }
-
   .post-content {
-    padding: 1rem;
+    padding: .5rem;
   }
 }
