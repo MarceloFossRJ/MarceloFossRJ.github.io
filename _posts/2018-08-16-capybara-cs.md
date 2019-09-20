@@ -23,7 +23,8 @@ visit(post_comments_path(post))
 click_link('id-of-link')
 click_link('Link Text')
 click_button('Save')
-click('Link Text') # Click either a link or a button
+# Click either a link or a button
+click('Link Text')
 click('Button Value')
 ```
 
@@ -49,6 +50,8 @@ check('A Checkbox')
 uncheck('A Checkbox')
 attach_file('Image', '/path/to/image.jpg')
 select('Option', :from => 'Select Box')
+# Find disabled fields with
+find_field 'This is disabled', disabled: true
 ```
 
 * Scripting
@@ -114,6 +117,37 @@ page.find_link('other')[:href]
 
 **Note:** In XPath the expression `//` means something very specific, and it might not be what you think. Contrary to common belief, `//` means "anywhere in the document" not "anywhere in the current context".
 
+#### Attributes for find or All
+
+```ruby
+Options Hash (options):
+
+text (String, Regexp) — Only find elements which contain this text or match this regexp
+
+
+:all - same as false; finds visible and invisible elements.
+:hidden - only finds invisible elements.
+:visible - same as true; only finds visible elements.
+
+function visible (Boolean, Symbol) — Only find elements with the specified visibility:
+          true - only finds visible elements.
+          false - finds invisible and visible elements.
+
+count (Integer) — Exact number of matches that are expected to be found
+maximum (Integer) — Maximum number of matches that are expected to be found
+minimum (Integer) — Minimum number of matches that are expected to be found
+between (Range) — Number of matches found must be within the given range
+exact (Boolean) — Control whether `is` expressions in the given XPath match exactly or partially
+wait (Integer) — default: Capybara.default_max_wait_time — The time to wait for element count expectations to become true
+
+
+Exemples:
+find("#btn_login", :visible => true).click # search only the visible element.
+find("#btn_login", :visible => false).click # Search only the invisible element.
+find("#btn_login", :hidden => true).click # Serch for the hidden element.
+find("#btn_login", :all => true).click # Search for both visible or hidden elements.
+find("#btn_login", :wait => 10).click # Changes the internal timeout - in seconds.
+```
 
 ### Capybara Scoped Finder `within`
 
