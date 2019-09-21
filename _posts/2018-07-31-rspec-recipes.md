@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RSpec recipes"
+title:  "RSpec Recipes"
 date:   2018-07-31 09:15:54 -0300
 categories: [recipe]
 tags: [ruby, ror, test, bdd, tdd, rspec, rails]
@@ -143,12 +143,12 @@ You may want to combine the before(:each) we just added with the previous one bu
 
 # Good reads
 
-https://www.devmynd.com/blog/setting-up-rspec-and-capybara-in-rails-5-for-testing/
+[https://www.devmynd.com/blog/setting-up-rspec-and-capybara-in-rails-5-for-testing/](https://www.devmynd.com/blog/setting-up-rspec-and-capybara-in-rails-5-for-testing/){:target="\_blank"}
 
-https://github.com/rspec/rspec-rails
+[https://github.com/rspec/rspec-rails](https://github.com/rspec/rspec-rails){:target="\_blank"}
 
-https://github.com/CodingItWrong/rails-rspec-capybara-javascript
+[https://github.com/CodingItWrong/rails-rspec-capybara-javascript](https://github.com/CodingItWrong/rails-rspec-capybara-javascript){:target="\_blank"}
 
-https://robots.thoughtbot.com/rspec-integration-tests-with-capybara
+[https://robots.thoughtbot.com/rspec-integration-tests-with-capybara](https://robots.thoughtbot.com/rspec-integration-tests-with-capybara){:target="\_blank"}
 
-https://medium.com/@ethanryan/testing-your-app-in-the-browser-with-capybara-rails-backend-react-frontend-e409671c4596
+[https://medium.com/@ethanryan/testing-your-app-in-the-browser-with-capybara-rails-backend-react-frontend-e409671c4596](https://medium.com/@ethanryan/testing-your-app-in-the-browser-with-capybara-rails-backend-react-frontend-e409671c4596){:target="\_blank"}

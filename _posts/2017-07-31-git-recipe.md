@@ -12,19 +12,19 @@ The official Git documentation has the fantastic **giteveryday** guide, that can
 This article reformats the referred guide.
 
 ### The most basic workflow
-1. Checkout or create new branch 
-```$git checkout -b <new_branch>```
-2. Apply changes and commit
-```$git add .``` and ```$git commit -m 'your comment'```
-4. Merge changes from others 
-```$git merge master```
-5. Checkout master (or the branch you wish to merge into) 
-```$git checkout master```
-6. Merge the new branch 
-```$git merge <new_branch>```
-7. Delete the branch you no longer need or you can also continue to develop on the new branch, merging it in a later moment.
+1. Checkout or create new branch  
+`$git checkout -b <new_branch>`  
+2. Apply changes and commit  
+`$git add .` and `$git commit -m 'your comment'`  
+4. Merge changes from others  
+`$git merge master`  
+5. Checkout master (or the branch you wish to merge into)  
+`$git checkout master`  
+6. Merge the new branch  
+`$git merge <new_branch>`  
+7. Delete the branch you no longer need or you can also continue to develop on the new branch, merging it in a later moment.  
 
- 
+
 ### For the individual Developer (Standalone)
 A standalone individual developer does not exchange patches with other people, and works alone in a single repository.
 
@@ -49,7 +49,7 @@ $ git init
 ```
 2. Add everything under the current directory.
 ```
-$ git add . 
+$ git add .
 ```
 3. Commit all files to local repository
 ```
@@ -80,7 +80,7 @@ $ edit/compile/test
 
 4. To see what changes you are committing.
 ```
-$ git diff HEAD 
+$ git diff HEAD
 ```
 
 5. Commit everything, as you have tested, with your sign-off.
@@ -116,7 +116,7 @@ $ git log --since='3 days ago'
 
 11. View only the changes that touch what’s in curses/ directory, since v2.43 tag.
 ```
-$ git log v2.43.. curses/ 
+$ git log v2.43.. curses/
 ```
 
 ### Individual Developer (Participant)
@@ -139,7 +139,7 @@ $ cd my2.6
 
 2. checkout a new branch <mine> from master.
 ```
-$ git checkout -b mine master 
+$ git checkout -b mine master
 ```
 
 3. repeat as needed.
@@ -149,60 +149,60 @@ $ edit/compile/test; git commit -a -s
 
 4. extract patches from your branch, relative to master,
 ```
-$ git format-patch master 
+$ git format-patch master
 ```
 
 5. and email them.
 ```
-$ git send-email --to="person <email@example.com>" 00*.patch 
+$ git send-email --to="person <email@example.com>" 00*.patch
 ```
 
 6. return to master, ready to see what’s new
 ```
-$ git checkout master 
+$ git checkout master
 ```
 
 7. git pull fetches from origin by default and merges into the current branch.
 ```
-$ git pull 
+$ git pull
 ```
 
 8. immediately after pulling, look at the changes done upstream since last time we checked, only in the area we are interested in.
 ```
-$ git log -p ORIG_HEAD.. arch/i386 include/asm-i386 
+$ git log -p ORIG_HEAD.. arch/i386 include/asm-i386
 ```
 
 9. check the branch names in an external repository (if not known).
 ```
-$ git ls-remote --heads http://git.kernel.org/.../jgarzik/libata-dev.git 
+$ git ls-remote --heads http://git.kernel.org/.../jgarzik/libata-dev.git
 ```
 
 10. fetch from a specific branch ALL from a specific repository and merge it.
 ```
-$ git pull git://git.kernel.org/pub/.../jgarzik/libata-dev.git ALL 
+$ git pull git://git.kernel.org/pub/.../jgarzik/libata-dev.git ALL
 ```
 
 11. revert the pull.
 ```
-$ git reset --hard ORIG_HEAD 
+$ git reset --hard ORIG_HEAD
 ```
 
 12. garbage collect leftover objects from reverted pull.
 ```
-$ git gc 
+$ git gc
 ```
 
 ### Push into another repository.
 
 1. mothership machine has a frotz repository under your home directory; clone from it to start a repository on the satellite machine.
 ```
-satellite$ git clone mothership:frotz frotz 
+satellite$ git clone mothership:frotz frotz
 satellite$ cd frotz
 ```
 
 2. clone sets these configuration variables by default. It arranges ```git pull``` to fetch and store the branches of mothership machine to local ```remotes/origin/*``` remote-tracking branches.
 ```
-satellite$ git config --get-regexp '^(remote|branch)\.' 
+satellite$ git config --get-regexp '^(remote|branch)\.'
 remote.origin.url mothership:frotz
 remote.origin.fetch refs/heads/*:refs/remotes/origin/*
 branch.master.remote origin
@@ -212,13 +212,13 @@ branch.master.merge refs/heads/master
 3. arrange ```git``` push to push all local branches to their corresponding branch of the mothership machine.
 ```
 satellite$ git config remote.origin.push \
-	   +refs/heads/*:refs/remotes/satellite/* 
+	   +refs/heads/*:refs/remotes/satellite/*
 satellite$ edit/compile/test/commit
 ```
 
 4. push will stash all our work away on ```remotes/satellite/*``` remote-tracking branches on the mothership machine. You could use this as a back-up method. Likewise, you can pretend that mothership "fetched" from you (useful when access is one sided).
 ```
-satellite$ git push origin 
+satellite$ git push origin
 mothership$ cd frotz
 mothership$ git checkout master
 ```
@@ -237,9 +237,8 @@ $ git checkout master
 ```
 2. forward port all changes in private2.6.14 branch to master branch without a formal "merging". Or longhand git format-patch -k -m --stdout v2.6.14..private2.6.14 | git am -3 -k
 ```
-$ git cherry-pick v2.6.14..private2.6.14 
+$ git cherry-pick v2.6.14..private2.6.14
 ```
 
 
 An alternate participant submission mechanism is using the git request-pull or pull-request mechanisms (e.g as used on GitHub (www.github.com) to notify your upstream of your contribution.
-

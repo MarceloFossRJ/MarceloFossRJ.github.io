@@ -6,7 +6,7 @@ category: [cheatsheet]
 tags: [vim, cheatsheet]
 author: Marcelo Foss
 intro: |
-  [Vim](http://www.vim.org/) is a very efficient text editor. This reference was made for Vim 8.0.
+  [Vim](http://www.vim.org/){:target="\_blank"} is a very efficient text editor. This reference was made for Vim 8.0.
 ---
 
 
@@ -362,6 +362,6 @@ Works like `:qa`, but throws an error. Great for aborting Git commands.
 Also see
 --------
 
-- [Vim cheatsheet](https://vim.rtorr.com/) _(vim.rotrr.com)_
-- [Vim documentation](http://vimdoc.sourceforge.net/htmldoc/) _(vimdoc.sourceforge.net)_
-- [Interactive Vim tutorial](http://openvim.com/) _(openvim.com)_
+- [Vim cheatsheet](https://vim.rtorr.com/){:target="\_blank"} _(vim.rotrr.com)_
+- [Vim documentation](http://vimdoc.sourceforge.net/htmldoc/){:target="\_blank"} _(vimdoc.sourceforge.net)_
+- [Interactive Vim tutorial](http://openvim.com/){:target="\_blank"} _(openvim.com)_

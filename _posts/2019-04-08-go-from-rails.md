@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Calling Golang script from a Rails app"
+title:  "Calling Golang Script from a Rails app"
 date:   2019-04-02 19:45:31 -0300
 categories: [recipe]
 tags: [database, document, nosql, mongodb, rails, ruby, RoR, db]
@@ -122,8 +122,8 @@ end
 ```
 
 ### Interesting reference about Rake
-[https://medium.com/@sampatbadhe/rake-task-invoke-or-execute-419cd689c3bd](https://medium.com/@sampatbadhe/rake-task-invoke-or-execute-419cd689c3bd)
+[https://medium.com/@sampatbadhe/rake-task-invoke-or-execute-419cd689c3bd](https://medium.com/@sampatbadhe/rake-task-invoke-or-execute-419cd689c3bd){:target="\_blank"}
 
-[https://www.stuartellis.name/articles/rake/](https://www.stuartellis.name/articles/rake/)
+[https://www.stuartellis.name/articles/rake/](https://www.stuartellis.name/articles/rake/){:target="\_blank"}
 
-[http://tutorials.jumpstartlab.com/topics/systems/automation.html](http://tutorials.jumpstartlab.com/topics/systems/automation.html)
+[http://tutorials.jumpstartlab.com/topics/systems/automation.html](http://tutorials.jumpstartlab.com/topics/systems/automation.html){:target="\_blank"}

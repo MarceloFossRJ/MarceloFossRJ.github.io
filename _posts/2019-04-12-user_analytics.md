@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Getting visitor analytics for Rails apps"
+title:  "Getting Visitor Analytics for Rails apps"
 date:   2019-04-12 19:45:31 -0300
 categories: [article]
 tags: [web analytics, web, rails, ruby]
 author: Marcelo Foss
 ---
-Very interesting article *'User Analytics for Rails Apps'* written by **Bala Paranj** at *Rubyplus.com*, here is the link of the original post: [https://rubyplus.com/articles/4051-User-Analytics-for-Rails-Apps](https://rubyplus.com/articles/4051-User-Analytics-for-Rails-Apps)
+Very interesting article *'User Analytics for Rails Apps'* written by **Bala Paranj** at *Rubyplus.com*, here is the link of the original post: [https://rubyplus.com/articles/4051-User-Analytics-for-Rails-Apps](https://rubyplus.com/articles/4051-User-Analytics-for-Rails-Apps){:target="\_blank"}
 
 ## Getting IP Address
 * Extract the IP from the request in the controller:
@@ -177,7 +177,7 @@ You can use `user_agent_parser` gem.
 These tips are based on the source code of ahoy_matey gem. It uses user_agent_parser gem to find the browser name and the OS. We can use the browser gem to give us that information.
 
 ## References
-[referer-parser gem](https://github.com/snowplow/referer-parser){:target="_blank"}  
-[Geocoder Gem](https://github.com/alexreisner/geocoder){:target="_blank"}  
-[Browser Gem](https://github.com/fnando/browser){:target="_blank"}  
-[Replacing Ruby's URI with Addressable](http://cloudspace.com/blog/2009/05/26/replacing-rubys-uri-with-addressable#.XK5eGS-ZPOQ){:target="_blank"}  
+[referer-parser gem](https://github.com/snowplow/referer-parser){:target="\_blank"}  
+[Geocoder Gem](https://github.com/alexreisner/geocoder){:target="\_blank"}  
+[Browser Gem](https://github.com/fnando/browser){:target="\_blank"}  
+[Replacing Ruby's URI with Addressable](http://cloudspace.com/blog/2009/05/26/replacing-rubys-uri-with-addressable#.XK5eGS-ZPOQ){:target="\_blank"}  

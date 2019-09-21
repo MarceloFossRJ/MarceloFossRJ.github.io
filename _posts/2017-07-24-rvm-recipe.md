@@ -171,4 +171,4 @@ $rvm gemset use gemset_name
 $rvm gemset delete gemset_name
 {% endhighlight %}
 
-Check the RVM website for a detailed (and good) documentation at [https://rvm.io/](https://rvm.io/)
+Check the RVM website for a detailed (and good) documentation at [https://rvm.io/](https://rvm.io/){:target="_blank"}

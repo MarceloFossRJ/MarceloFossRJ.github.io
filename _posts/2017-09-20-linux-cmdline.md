@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A quick Linux command line reference"
+title:  "Small Linux Command Line Reference"
 date:   2017-09-20 19:45:31 -0300
 categories: [reference card]
 tags: [linux]

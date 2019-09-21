@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MongoDB + RoR Quick Start"
-date:   2019-04-02 19:45:31 -0300
+date:   2019-04-01 19:45:31 -0300
 categories: [recipe]
 tags: [database, document, nosql, mongodb, rails, ruby, RoR, db]
 author: Marcelo Foss
@@ -19,7 +19,7 @@ Active record uses migrations to control your database, which won’t be needed 
 ### Mongoid driver configuration
 There are several GEMs to interact with MongoDB. I used the MongoID GEM.
 Mongoid is a ODM (object document mapper) framework for Mongo in Ruby.
-You can find more information [HERE](https://docs.mongodb.com/mongoid/current/).
+You can find more information [HERE](https://docs.mongodb.com/mongoid/current/){:target="\_blank"}.
 ``` ruby
 # gemfile
 ...

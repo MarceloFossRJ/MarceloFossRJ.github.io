@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git reference card"
+title:  "Git Reference Card"
 date:   2017-07-26 18:44:25 -0300
 categories: [reference card]
 tags: [git, github, version control]
@@ -54,7 +54,7 @@ Each file can be in one of two states:
 * Untracked
 
 ### Ignoring files
-Set up a .gitignore file, in the folder the repository was initialized, with glob patterns (simplified regular expressions <a href='https://en.wikipedia.org/wiki/Glob_(programming)' target='_blank'>https://en.wikipedia.org/wiki/Glob_(programming)</a>)
+Set up a .gitignore file, in the folder the repository was initialized, with glob patterns (simplified regular expressions <a href='https://en.wikipedia.org/wiki/Glob_(programming)' target='\_blank'>https://en.wikipedia.org/wiki/Glob_(programming)</a>)
 
 ### Tracking newly created files, or Staging modified files:
 To add a file to staging or index:
@@ -216,11 +216,11 @@ Annotated tags are meant for release while lightweight tags are meant for privat
 ```
 $ git tag -s -a -m <message> <tagname>
 ````
-```-s``` will GPG sign your tag.
+`-s` will GPG sign your tag.
 
-```-a``` will create an annotated tag. Git will prompt for an annotation.  
+`-a` will create an annotated tag. Git will prompt for an annotation.  
 
-```-m <message>``` will add a tag message. Git will *not* prompt for an annotation   
+`-m <message>` will add a tag message. Git will *not* prompt for an annotation   
 
 If you need to amend / fix / replace an existing tag, you can use the ```-f``` parameter to overwrite the current tag.
 
@@ -248,7 +248,7 @@ $git tag <tagname> <commit>
 #### Sharing tags
 
 By default, the git push command doesn't transfer tags to remote servers.
-````
+```
 $git push origin --tags
 ```
 
@@ -295,17 +295,17 @@ $git merge <branch_name_1>
 ```
 
 ## A basic workflow
-1. Checkout or create new branch
-```$git checkout -b <new_branch>```
-2. Apply changes and commit
-```$git commit -a -m 'your comment'```
-4. Merge changes from others
-```$git merge master```
-5. Checkout master (or the branch you wish to merge into)
-```$git checkout master```
-6. Merge the new branch
-```$git merge <new_branch>```
-7. Delete the branch you no longer need or you can also continue to develop on the new branch, merging it in a later moment.
+1. Checkout or create new branch  
+`$git checkout -b <new_branch>`  
+2. Apply changes and commit  
+`$git commit -a -m 'your comment'`    
+4. Merge changes from others   
+`$git merge master`  
+5. Checkout master (or the branch you wish to merge into)   
+`$git checkout master`   
+6. Merge the new branch   
+`$git merge <new_branch>`   
+7. Delete the branch you no longer need or you can also continue to develop on the new branch, merging it in a later moment.   
 
 ## Merge conflicts
 

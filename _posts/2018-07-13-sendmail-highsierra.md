@@ -53,4 +53,4 @@ $ mailq
 ```
 
 # Reference
-[http://www.garron.me/en/mac/postfix-relay-gmail-mac-os-x-local-smtp.html](http://www.garron.me/en/mac/postfix-relay-gmail-mac-os-x-local-smtp.html)
+[http://www.garron.me/en/mac/postfix-relay-gmail-mac-os-x-local-smtp.html](http://www.garron.me/en/mac/postfix-relay-gmail-mac-os-x-local-smtp.html){:target="\_blank"}

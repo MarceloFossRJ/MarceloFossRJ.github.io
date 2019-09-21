@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rails code review"
+title:  "Rails Code Review"
 date:   2017-11-05 19:45:31 -0300
 categories: [article]
 tags: [ror, rails, code review, code quality]
@@ -71,10 +71,10 @@ As for a quality checklist, I err on the side of beauty:
 8. Views are logic-free?
 
 ## Other Rails code review guidelines
-[https://rails-bestpractices.com](https://rails-bestpractices.com)  
+[https://rails-bestpractices.com](https://rails-bestpractices.com){:target="\_blank"}  
 
-[https://github.com/eliotsykes/rails-code-review][https://github.com/eliotsykes/rails-code-review]  
+[https://github.com/eliotsykes/rails-code-review](https://github.com/eliotsykes/rails-code-review){:target="\_blank"}  
 
-[https://blog.planetargon.com/entries/ruby-on-rails-code-audits-8-steps-to-review-your-app][https://blog.planetargon.com/entries/ruby-on-rails-code-audits-8-steps-to-review-your-app]  
+[https://blog.planetargon.com/entries/ruby-on-rails-code-audits-8-steps-to-review-your-app](https://blog.planetargon.com/entries/ruby-on-rails-code-audits-8-steps-to-review-your-app){:target="\_blank"}  
 
-[https://www.sitepoint.com/the-importance-of-code-reviews/][https://www.sitepoint.com/the-importance-of-code-reviews/]  
+[https://www.sitepoint.com/the-importance-of-code-reviews/](https://www.sitepoint.com/the-importance-of-code-reviews/){:target="\_blank"}  

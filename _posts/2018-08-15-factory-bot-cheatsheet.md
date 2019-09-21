@@ -10,10 +10,7 @@ intro: |
   It was previously known as Factory Girl. For older versions, use `FactoryGirl` instead of `FactoryBot`.
 ---
 Ref:
-<https://devhints.io/factory_bot>
-
-## Factories
-{: .-three-column}
+[https://devhints.io/factory_bot](https://devhints.io/factory_bot){:target="\_blank"}  
 
 ### Defining factories
 
@@ -132,7 +129,7 @@ create :user, :admin
 ```
 
 Traits allow you to group attributes together.
-See: [Traits](http://www.rubydoc.info/gems/factory_bot/file/GETTING_STARTED.md#Traits)
+See: [Traits](http://www.rubydoc.info/gems/factory_bot/file/GETTING_STARTED.md#Traits){:target="\_blank"}   
 
 ### Nested factories
 
@@ -151,7 +148,7 @@ end
 create :sample_user
 ```
 
-See: [Inheritance](http://www.rubydoc.info/gems/factory_bot/file/GETTING_STARTED.md#Inheritance)
+See: [Inheritance](http://www.rubydoc.info/gems/factory_bot/file/GETTING_STARTED.md#Inheritance){:target="\_blank"}   
 
 ### Sub-factories
 
@@ -194,7 +191,7 @@ create(user, upcased: true)
 ```
 
 Transient attributes will not get passed to the model, but will be available in after-create hooks.
-See: [Transient attributes](http://www.rubydoc.info/gems/factory_bot/file/GETTING_STARTED.md#Transient_Attributes)
+See: [Transient attributes](http://www.rubydoc.info/gems/factory_bot/file/GETTING_STARTED.md#Transient_Attributes){:target="\_blank"}
 
 ### Paths
 
@@ -209,4 +206,4 @@ Place your factories in these locations.
 ## See also
 {: .-one-column}
 
-* <http://rubydoc.info/gems/factory_bot/file/GETTING_STARTED.md>
+* [http://rubydoc.info/gems/factory_bot/file/GETTING_STARTED.md](http://rubydoc.info/gems/factory_bot/file/GETTING_STARTED.md){:target="\_blank"}

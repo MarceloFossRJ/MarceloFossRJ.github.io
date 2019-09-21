@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Debugging Rails applications"
+title:  "Debugging Rails Applications"
 date:   2017-10-18 19:45:31 -0300
 categories: [recipe]
 tags: [ror, gems, debug, assert]
@@ -18,14 +18,14 @@ The current post is about using a tradutional debugger, Byebug receives most of 
 You can check the post for logging at []()
 
 # Using Byebug to debug
-[https://rubyplus.com/articles/3631-Debugging-using-ByeBug-Gem-in-Rails-5][https://rubyplus.com/articles/3631-Debugging-using-ByeBug-Gem-in-Rails-5]
-[https://fleeblewidget.co.uk/2014/05/byebug-cheatsheet/][https://fleeblewidget.co.uk/2014/05/byebug-cheatsheet/]
+[https://rubyplus.com/articles/3631-Debugging-using-ByeBug-Gem-in-Rails-5](https://rubyplus.com/articles/3631-Debugging-using-ByeBug-Gem-in-Rails-5){:target="\_blank"}  
+[https://fleeblewidget.co.uk/2014/05/byebug-cheatsheet/](https://fleeblewidget.co.uk/2014/05/byebug-cheatsheet/){:target="\_blank"}   
 When your code is behaving in unexpected ways, you can try printing to logs or the console to diagnose the problem. Unfortunately, there are times when this sort of error tracking is not effective in finding the root cause of a problem. When you actually need to journey into your running source code, the debugger is your best companion.
 
 ## Setup
 You can use the byebug gem to set breakpoints and step through live code in Rails. To install it, just run:
 
-```ruby
+```
 $ gem install byebug
 ```
 
@@ -416,11 +416,11 @@ There are some Rails plugins to help you to find errors and debug your applicati
 * Pry: An IRB alternative and runtime developer console.
 
 # Good reads  
-https://www.sitepoint.com/the-ins-and-outs-of-debugging-ruby-with-byebug/
-http://nofail.de/2013/10/debugging-rails-applications-in-development/
+[https://www.sitepoint.com/the-ins-and-outs-of-debugging-ruby-with-byebug](https://www.sitepoint.com/the-ins-and-outs-of-debugging-ruby-with-byebug){:target="\_blank"}  
+[http://nofail.de/2013/10/debugging-rails-applications-in-development/](http://nofail.de/2013/10/debugging-rails-applications-in-development/){:target="\_blank"}   
 
 # References
 byebug Homepage
 web-console Homepage
 
-https://github.com/pry/pry
+[https://github.com/pry/pry](https://github.com/pry/pry)

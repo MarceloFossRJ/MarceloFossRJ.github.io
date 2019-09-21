@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rails in brazilian portuguese"
+title:  "Rails in Brazilian Portuguese"
 date:   2018-07-12 19:45:31 -0300
 categories: [article]
 tags: [architecture, rails, ror]
@@ -357,6 +357,6 @@ config.active_record.default_timezone = :local
 That is better when you are using a lagacy database, that uses Brasília timezone, or if you import data from another database directly via SQL and not via ActiveRecord.
 
 # Reference
-[http://vaidehijoshi.github.io/blog/2015/09/01/inflections-everywhere-using-activesupport-inflector/](http://vaidehijoshi.github.io/blog/2015/09/01/inflections-everywhere-using-activesupport-inflector/)
+[http://vaidehijoshi.github.io/blog/2015/09/01/inflections-everywhere-using-activesupport-inflector/](http://vaidehijoshi.github.io/blog/2015/09/01/inflections-everywhere-using-activesupport-inflector/){:target="\_blank"}
 
-[https://pt.stackoverflow.com/questions/19512/como-programar-em-português-no-ruby-on-rails](https://pt.stackoverflow.com/questions/19512/como-programar-em-português-no-ruby-on-rails)
+[https://pt.stackoverflow.com/questions/19512/como-programar-em-português-no-ruby-on-rails](https://pt.stackoverflow.com/questions/19512/como-programar-em-português-no-ruby-on-rails){:target="\_blank"}

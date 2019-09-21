@@ -1,20 +1,20 @@
 ---
 layout: post
-title:  "Facetime camera fix"
+title:  "Facetime Camera Fix"
 date:   2017-08-09 14:22:20 -0300
 categories: [recipe]
 tags: [macosx, el capitan, facetime]
 author: Marcelo Foss
 ---
 The problem: Facetime Camera Not Working.  
-I have OSX El Capitain running in my Macbook Pro, and from time to time, the facetime camera stops working. 
+I have OSX El Capitain running in my Macbook Pro, and from time to time, the facetime camera stops working.
 
 To fix this problem, do the following:
 
 1. Close all the applications that are using the camera (such as FaceTime and Skype).  
 2. Open a terminal (Launchpad -> Terminal).  
 3. Type the following command:  
-``` 
+```
 $sudo killall VDCAssistant
 ```
 4. Re-open your application. You should see that the camera is working now.  
@@ -24,4 +24,3 @@ Forcing this process to be close, releases the resources that will then be avail
 
 This approach should fix this issue 99% of the time. For the remaining 1%, you might just need to restart your Mac.
 The following applies also to external cameras connected to your Mac (i.e. a USB camera).
-

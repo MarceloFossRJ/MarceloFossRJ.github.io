@@ -40,4 +40,4 @@ The text was excerpted from a Worthington publication which was originally publi
 
 
 Reference:     
-[http://www.worthington-biochem.com/introbiochem/naming.html](http://www.worthington-biochem.com/introbiochem/naming.html)
+[http://www.worthington-biochem.com/introbiochem/naming.html](http://www.worthington-biochem.com/introbiochem/naming.html){:target="\_blank"}

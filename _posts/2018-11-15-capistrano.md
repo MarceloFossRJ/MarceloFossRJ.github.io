@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Capistrano recipes
-date:   2018-10-20 18:44:25 -0300
+title: Capistrano Recipes
+date:   2018-11-15 18:44:25 -0300
 category: [recipe]
-tags: [deploy, capistrano, rake, deployment, release, ruby]
+tags: [deploy, capistrano, rake, deployment, release, ruby, CI, CD]
 author: Marcelo Foss
 intro: |
-  [Capistrano](https://github.com/capistrano/capistrano) is a framework for building automated deployment scripts. Although Capistrano itself is written in Ruby, it can easily be used to deploy projects of any language or framework, be it Rails, Java, or PHP.
+  [Capistrano](https://github.com/capistrano/capistrano){:target="\_blank"} is a framework for building automated deployment scripts. Although Capistrano itself is written in Ruby, it can easily be used to deploy projects of any language or framework, be it Rails, Java, or PHP.
 ---
 
 # Capistrano: A deployment automation tool built on Ruby, Rake, and SSH.
@@ -22,7 +22,7 @@ $ cd my-capistrano-enabled-project
 $ cap production deploy
 ```
 
-When you run `cap`, Capistrano dutifully connects to your server(s) via SSH and executes the steps necessary to deploy your project. You can define those steps yourself by writing [Rake](https://github.com/ruby/rake) tasks, or by using pre-built task libraries provided by the Capistrano community.
+When you run `cap`, Capistrano dutifully connects to your server(s) via SSH and executes the steps necessary to deploy your project. You can define those steps yourself by writing [Rake](https://github.com/ruby/rake){:target="\_blank"} tasks, or by using pre-built task libraries provided by the Capistrano community.
 
 Tasks are simple to make. Here's an example:
 
@@ -42,7 +42,7 @@ after "deploy:published", "restart_sidekiq"
 * Ruby version 2.0 or higher on your local machine (MRI or Rubinius)
 * A project that uses source control (Git, Mercurial, and Subversion support is built-in)
 * The SCM binaries (e.g. `git`, `hg`) needed to check out your project must be installed on the server(s) you are deploying to
-* [Bundler](http://bundler.io), along with a Gemfile for your project, are recommended
+* [Bundler](http://bundler.io){:target="\_blank"}, along with a Gemfile for your project, are recommended
 
 ### Install the Capistrano gem
 

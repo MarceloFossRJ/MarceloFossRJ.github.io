@@ -6,9 +6,7 @@ category: [cheatsheet]
 tags: [postgresql, psql, db, database, postgres, cheatsheet]
 author: Marcelo Foss
 intro: |
-  [PostgreSQL](http://www.vim.org/) is a very efficient text editor. This reference was made for Vim 8.0.
 ---
-
 
 ## PSQL
 
@@ -75,7 +73,7 @@ log_line_prefix = '%t %u %d %a '
 
 ## Create command
 
-There are many `CREATE` choices, like `CREATE DATABASE __database_name__`, `CREATE TABLE __table_name__` ... Parameters differ but can be checked [at the official documentation](https://www.postgresql.org/search/?u=%2Fdocs%2F9.1%2F&q=CREATE).
+There are many `CREATE` choices, like `CREATE DATABASE __database_name__`, `CREATE TABLE __table_name__` ... Parameters differ but can be checked [at the official documentation](https://www.postgresql.org/search/?u=%2Fdocs%2F9.1%2F&q=CREATE){:target="\_blank"}.
 
 
 ## Handy queries
@@ -140,14 +138,14 @@ Query analysis:
 
 ## Tools
 - `ptop` and `pg_top`: `top` for PG. Available on the APT repository from `apt.postgresql.org`.
-- [pg_activity](https://github.com/julmon/pg_activity): Command line tool for PostgreSQL server activity monitoring.
-- [Unix-like reverse search in psql](https://dba.stackexchange.com/questions/63453/is-there-a-psql-equivalent-of-bashs-reverse-search-history):
+- [pg_activity](https://github.com/julmon/pg_activity){:target="\_blank"}: Command line tool for PostgreSQL server activity monitoring.
+- [Unix-like reverse search in psql](https://dba.stackexchange.com/questions/63453/is-there-a-psql-equivalent-of-bashs-reverse-search-history){:target="\_blank"}:
 ```bash
 $ echo "bind "^R" em-inc-search-prev" > $HOME/.editrc
 $ source $HOME/.editrc
 ```
-- [PostgreSQL Exercises](https://pgexercises.com/): An awesome resource to learn to learn SQL, teaching you with simple examples in a great visual way. **Highly recommended**.
-- [A Performance Cheat Sheet for PostgreSQL](https://severalnines.com/blog/performance-cheat-sheet-postgresql): Great explanations of `EXPLAIN`, `EXPLAIN ANALYZE`, `VACUUM`, configuration parameters and more. Quite interesting if you need to tune-up a postgres setup.
+- [PostgreSQL Exercises](https://pgexercises.com/){:target="\_blank"}: An awesome resource to learn to learn SQL, teaching you with simple examples in a great visual way. **Highly recommended**.
+- [A Performance Cheat Sheet for PostgreSQL](https://severalnines.com/blog/performance-cheat-sheet-postgresql){:target="\_blank"}: Great explanations of `EXPLAIN`, `EXPLAIN ANALYZE`, `VACUUM`, configuration parameters and more. Quite interesting if you need to tune-up a postgres setup.
 
 
 

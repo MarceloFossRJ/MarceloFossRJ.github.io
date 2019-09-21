@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Git reference card"
+title:  "RSpec heat Sheet"
 date:   2017-07-26 18:44:25 -0300
 categories: [cheatsheet]
-tags: [rspec, testing, rails]
+tags: [rspec, testing, rails, tdd, bdd, ror, rails]
 author: Marcelo Foss
 ---
 ## Reference
-[https://thoughtbot.com/upcase/test-driven-rails-resources/rspec_acceptance.pdf](https://thoughtbot.com/upcase/test-driven-rails-resources/rspec_acceptance.pdf)
+[https://thoughtbot.com/upcase/test-driven-rails-resources/rspec_acceptance.pdf](https://thoughtbot.com/upcase/test-driven-rails-resources/rspec_acceptance.pdf){:target="\_blank"}
 
 #Basic Structure
 

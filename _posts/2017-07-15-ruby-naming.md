@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ruby naming convention"
+title:  "Ruby Naming Convention"
 date:   2017-07-15 19:45:31 -0300
 categories: [guide]
 tags: [ruby, standard]
@@ -13,7 +13,7 @@ Lowercase letter means the characters "a" through "z".
 Uppercase letter means the characters "A" through "Z".
 A digit means "0" through "9".  
 
-A name is an uppercase letter, lowercase letter, or an underscore ("_"), followed by Name characters (this is any combination of upper- and lowercase letters, underscore and digits).
+A name is an uppercase letter, lowercase letter, or an underscore ("\_"), followed by Name characters (this is any combination of upper- and lowercase letters, underscore and digits).
 
 The Ruby convention is to use underscores to separate words in a multiword method or variable name.  
 By convention, most constants are written in all uppercase with underscores to separate words, LIKE_THIS.  

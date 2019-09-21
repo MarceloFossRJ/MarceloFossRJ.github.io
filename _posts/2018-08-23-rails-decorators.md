@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Decorator pattern in Rails engines"
+title:  "Decorator Pattern in Rails Engines"
 date:   2018-08-23 18:44:25 -0300
 categories: [recipe]
 tags: [rails, engines, patterns, decorator, ror]
@@ -13,7 +13,8 @@ No matter if you are writing a component based application in RoR, or if you are
 That's what we want to handle here.
 
 From wikipedia:
-[Decorator Pattern](https://en.wikipedia.org/wiki/Decorator_pattern)  
+title:  "RSpec heat Sheet"
+[Decorator Pattern](https://en.wikipedia.org/wiki/Decorator_pattern){:target="\_blank"}    
 *In object-oriented programming, the decorator pattern is a design pattern that allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class. The decorator pattern is often useful for adhering to the Single Responsibility Principle, as it allows functionality to be divided between classes with unique areas of concern.The decorator pattern is structurally nearly identical to the chain of responsibility pattern, the difference being that in a chain of responsibility, exactly one of the classes handles the request, while for the decorator, all classes handle the request.*
 
 So lets stop with talk and go directly to the code itself.

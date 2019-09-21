@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rails db:migrate reference card"
+title:  "Rails db:migrate Reference Card"
 date:   2017-07-24 17:12:01 -0300
 categories: [reference card]
 tags: [ror, rails, ruby, migration, database]
@@ -106,4 +106,4 @@ $rake db:migrate:up VERSION=20080906120000
 ```
 
 Further information at:  
-[http://guides.rubyonrails.org/migrations.html](http://guides.rubyonrails.org/migrations.html)
+[http://guides.rubyonrails.org/migrations.html](http://guides.rubyonrails.org/migrations.html){:target="_blank"}

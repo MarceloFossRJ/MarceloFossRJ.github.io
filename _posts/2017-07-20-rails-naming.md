@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rails naming convention"
+title:  "Rails Naming Convention"
 date:   2017-07-20 20:32:34 -0300
 categories: [guide]
 tags: [ruby, ror, rails, standard]
@@ -42,7 +42,7 @@ Table names have all lowercase letters and underscores between words, also all t
 The primary key of a table is assumed to be named id.
 
 **Foreign Key**  
-The foreign key is named with the singular version of the target table name with _id appended to it, e.g. order_id in the items table where we have items linked to the orders table.
+The foreign key is named with the singular version of the target table name with \_id appended to it, e.g. order_id in the items table where we have items linked to the orders table.
 
 **Many to Many Link Tables**  
 Tables used to join two tables in a many to many relationship is named using the table names they link, with the table names in alphabetical order, for example categories_users.

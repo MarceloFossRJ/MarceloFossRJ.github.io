@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Running Rails app locally in production environment"
+title:  "Running Rails app Locally in Production Environment"
 date:   2017-08-23 09:45:11 -0300
 categories: [recipe]
 tags: [rails, production, ruby, ror, rails_env]

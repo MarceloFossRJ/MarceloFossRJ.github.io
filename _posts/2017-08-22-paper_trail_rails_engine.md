@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Recipe to use paper_trail on Rails engines"
+title:  "Recipe to Use paper_trail with Rails Engines"
 date:   2017-08-22 15:22:20 -0300
 categories: [recipe]
 tags: [rails, engines, gem, components, ror, paper_trail]
@@ -66,7 +66,7 @@ class CreateGemNameTenantVersions < ActiveRecord::Migration[5.0]
       t.string   :event,     null: false
       t.string   :whodunnit
       t.text     :object, limit: TEXT_BYTES
-	  t.text     :object_changes	
+	  t.text     :object_changes
 
       t.datetime :created_at
     end

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Recipe to use Bootstrap with Rails engines"
+title:  "Recipe to Use Bootstrap with Rails Engines"
 date:   2017-08-23 09:45:11 -0300
 categories: [recipe]
 tags: [rails, engines, gem, components, ror, bootstrap]
@@ -99,7 +99,7 @@ Edit the application.js file and leave the lines below:
 //= require_tree .
 //= require <<EngineName>>/tether.min
 //= require <<EngineName>>/bootstrap.min
-	
+
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
@@ -126,14 +126,13 @@ Execute the following command to generate the kaminari initializer in the ```con
 ```
 $rails g kaminari:config
 ```
-To have the paginator working with bootstrap, run the following command 
+To have the paginator working with bootstrap, run the following command
 ```
-$rails g kaminari:views bootstrap4 
+$rails g kaminari:views bootstrap4
 ```
 It will create the folder ```app/views/kaminari``` with the files that overhide the default paginator.  
-You can change or customize as you want this files. 
+You can change or customize as you want this files.
 If you find any error running the generator, all it does is copying the files of the theme into app/views/kaminari/.  
-As a workaround you can just copy them from the master branch yourself from [https://github.com/amatsuda/kaminari_themes/](https://github.com/amatsuda/kaminari_themes/)
+As a workaround you can just copy them from the master branch yourself from [https://github.com/amatsuda/kaminari_themes/](https://github.com/amatsuda/kaminari_themes/){:target="\_blank"}
 
 To have it properly working with engines, you have to move the newly created folder inside the engine namespace: ```app/views/<<EngineName>>/```
-

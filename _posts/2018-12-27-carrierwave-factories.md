@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Carrierwave testing recipe
+title: Carrierwave Testing Recipes
 date:   2018-12-27 20:44:25 -0300
 category: [recipe]
 tags: [rspec, factory_bot, factories, recipe, carrierwave, upload, test, testing, tdd]

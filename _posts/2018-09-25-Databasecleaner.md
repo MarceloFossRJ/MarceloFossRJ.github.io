@@ -6,7 +6,7 @@ category: [recipe ]
 tags: [rspec, capybara, databasecleaner, cheatsheet, test, testing, tdd, bdd]
 author: Marcelo Foss
 intro: |
-  [DatabaseCleaner](https://github.com/DatabaseCleaner/database_cleaner) is a set of gems containing strategies for cleaning your database in Ruby. The original scenario was to ensure a clean state during tests. Each strategy is a small amount of code but is code that is usually needed in any ruby app that is testing with a database.
+  [DatabaseCleaner](https://github.com/DatabaseCleaner/database_cleaner){:target="\_blank"} is a set of gems containing strategies for cleaning your database in Ruby. The original scenario was to ensure a clean state during tests. Each strategy is a small amount of code but is code that is usually needed in any ruby app that is testing with a database.
 ---
 
 ## Spec_helper

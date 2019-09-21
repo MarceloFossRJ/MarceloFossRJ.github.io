@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom rails error pages
+title: Custom Ruby on Rails Error Pages
 date:   2019-04-14 18:44:25 -0300
 category: [recipe]
 tags: [Rails, Ruby, Error, Exception]
@@ -105,6 +105,6 @@ after "deploy:published", :generate_500_html
 ```
 This instructs Capistrano to request the ```/500``` route of your application and save the resulting HTML to ```public/500.html```. This happens on every successful deploy. Now your app has a static 500 error page that looks just like your dymamic one, automatically!
 
-[https://mattbrictson.com/dynamic-rails-error-pages](https://mattbrictson.com/dynamic-rails-error-pages)
-[https://pooreffort.com/blog/custom-rails-error-pages/](https://pooreffort.com/blog/custom-rails-error-pages/)
-[https://coderwall.com/p/whjmra/handling-exceptions-in-your-rails-application](https://coderwall.com/p/whjmra/handling-exceptions-in-your-rails-application)
+[https://mattbrictson.com/dynamic-rails-error-pages](https://mattbrictson.com/dynamic-rails-error-pages){:target="\_blank"}    
+[https://pooreffort.com/blog/custom-rails-error-pages/](https://pooreffort.com/blog/custom-rails-error-pages/){:target="\_blank"}   
+[https://coderwall.com/p/whjmra/handling-exceptions-in-your-rails-application](https://coderwall.com/p/whjmra/handling-exceptions-in-your-rails-application){:target="\_blank"}   
