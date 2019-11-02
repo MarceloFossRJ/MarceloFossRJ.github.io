@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "RSpec heat Sheet"
-date:   2017-07-26 18:44:25 -0300
+title:  "RSpec Cheat Sheet"
+date:   2017-08-15 18:44:25 -0300
 categories: [cheatsheet]
 tags: [rspec, testing, rails, tdd, bdd, ror, rails]
 author: Marcelo Foss
