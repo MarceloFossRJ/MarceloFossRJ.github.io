@@ -43,37 +43,43 @@ User Related:
 
 ## Configuration
 
-- Service management commands:
+### Service management commands:
 ```
 sudo service postgresql stop
 sudo service postgresql start
 sudo service postgresql restart
 ```
 
-- Changing verbosity & querying Postgres log:
-  <br/>1) First edit the config file, set a decent verbosity, save and restart postgres:
+### Changing verbosity & querying Postgres log:
+  - First edit the config file, set a decent verbosity, save and restart postgres:  
 ```
-sudo vim /etc/postgresql/9.3/main/postgresql.conf
-
-# Uncomment/Change inside:
+$ sudo vim /etc/postgresql/9.3/main/postgresql.conf
+```
+Uncomment/Change inside:
+```
 log_min_messages = debug5
 log_min_error_statement = debug5
 log_min_duration_statement = -1
+```
+save and restart the database  
+```
+$ sudo service postgresql restart
+```
 
-sudo service postgresql restart
+- Now you will get tons of details of every statement, error, and even background tasks
 ```
-  2) Now you will get tons of details of every statement, error, and even background tasks like VACUUMs
+$ tail -f /var/log/postgresql/postgresql-9.3-main.log
 ```
-tail -f /var/log/postgresql/postgresql-9.3-main.log
-```
-  3) How to add user who executed a PG statement to log (editing `postgresql.conf`):
+
+- How to add user who executed a PG statement to log (editing `postgresql.conf`):
 ```
 log_line_prefix = '%t %u %d %a '
 ```
 
 ## Create command
 
-There are many `CREATE` choices, like `CREATE DATABASE __database_name__`, `CREATE TABLE __table_name__` ... Parameters differ but can be checked [at the official documentation](https://www.postgresql.org/search/?u=%2Fdocs%2F9.1%2F&q=CREATE){:target="\_blank"}.
+There are many `CREATE` choices, like `CREATE DATABASE __database_name__`, `CREATE TABLE __table_name__` ...   
+Parameters differ but can be checked [at the official documentation](https://www.postgresql.org/search/?u=%2Fdocs%2F9.1%2F&q=CREATE){:target="\_blank"}.
 
 
 ## Handy queries
@@ -106,6 +112,7 @@ ORDER BY
    t.relname,
    i.relname
 ```
+
 - Execution data:
   - Queries being executed at a certain DB:
 ```sql
@@ -113,10 +120,12 @@ SELECT datname, application_name, pid, backend_start, query_start, state_change,
   FROM pg_stat_activity
   WHERE datname='__database_name__';
 ```
+
   - Get all queries from all dbs waiting for data (might be hung):
 ```sql
 SELECT * FROM pg_stat_activity WHERE waiting='t'
 ```
+
   - Currently running queries with process pid:
 ```sql
 SELECT pg_stat_get_backend_pid(s.backendid) AS procpid,
@@ -146,14 +155,3 @@ $ source $HOME/.editrc
 ```
 - [PostgreSQL Exercises](https://pgexercises.com/){:target="\_blank"}: An awesome resource to learn to learn SQL, teaching you with simple examples in a great visual way. **Highly recommended**.
 - [A Performance Cheat Sheet for PostgreSQL](https://severalnines.com/blog/performance-cheat-sheet-postgresql){:target="\_blank"}: Great explanations of `EXPLAIN`, `EXPLAIN ANALYZE`, `VACUUM`, configuration parameters and more. Quite interesting if you need to tune-up a postgres setup.
-
-
-
-
-foss=# create user instadwldr with password '@insta2019!';
-CREATE ROLE
-foss=# grant all privileges on database instadwldr_test to instadwldr;
-GRANT
-foss=# grant all privileges on database instadwldr_development to instadwldr;
-GRANT
-foss=# alter user instadwldr createdb;
