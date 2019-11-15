@@ -6,7 +6,7 @@ categories: [article]
 tags: [python, venv, standard]
 author: Marcelo Foss
 ---
-This article was created by Anthony Reid, and is available at (AnthonyReid99/VisualGitDocs)[https://github.com/AnthonyReid99/VisualGitDocs/blob/master/source/index.rst] and at (https://visualgit.readthedocs.io/en/latest/pages/code_style.html)[https://visualgit.readthedocs.io/en/latest/pages/code_style.html]
+This article was created by Anthony Reid, and is available at [AnthonyReid99/VisualGitDocs](https://github.com/AnthonyReid99/VisualGitDocs/blob/master/source/index.rst )and at [https://visualgit.readthedocs.io/en/latest/pages/code_style.html](https://visualgit.readthedocs.io/en/latest/pages/code_style.html)
 
 ## Python Coding Style Conventions
 
