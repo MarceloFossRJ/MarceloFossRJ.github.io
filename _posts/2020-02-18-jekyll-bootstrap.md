@@ -4,7 +4,7 @@ title:  "Creating a Jekyll Bootstrap Template"
 date:   2020-02-18 18:44:25 -0300
 categories: [article]
 tags: [ruby, jekyll, Bootstrap]
-author: Marcelo Foss
+author: Daniel Sieger
 ---
 This is an useful article originally published by Daniel Sieger at [danielsieger.com/CreatingAJekyllBootstrapTemplate](https://www.danielsieger.com/blog/2019/01/12/creating-jekyll-bootstrap-template.html)
 
@@ -31,7 +31,8 @@ Get the latest version of Bootstrap from their website. Be sure to download the 
 ```
 $ cp -r ~/Downloads/bootstrap-4.2.1/scss/* css/bootstrap/
 ```
-Create the main Sass file css/style.scss and import Bootstrap:
+
+Create the main Sass file `css/style.scss` and import Bootstrap:
 ```css
 ---
 ---
@@ -41,7 +42,8 @@ Create the main Sass file css/style.scss and import Bootstrap:
 
 /* add additional CSS rules below */
 ```
-Create a default ```_config.yml``` file telling Jekyll where to search for Sass files:
+
+Create a default `_config.yml` file telling Jekyll where to search for Sass files:
 ```
 sass:
   sass_dir: css
@@ -57,24 +59,34 @@ $ cp ~/Downloads/bootstrap-4.2.1/dist/js/* js/
 ```
 That’s all there is for the absolute minimum. However, this will not yet give you any useful site template. The following section describes how to add a default layout in order to get a minimal site up and running.
 
-Adding a Minimal Layout
+## Adding a Minimal Layout
 
 Create a default layout file as `_layouts/default.html`:
-```html
+```
 <!DOCTYPE html>
 <html lang="en">
+{% raw  %}
   {% include header.html %}
+{% endraw %}
   <body>
+{% raw  %}
     {% include navbar.html %}
+{% endraw %}
     <div class="container">
+{% raw  %}
       {{ content }}
+{% endraw  %}
     </div>
+{% raw  %}
     {% include footer.html %}
+{% endraw %}
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
 ```
+
+
 Create the `_includes directory`:
 ```
 $ mkdir _includes
@@ -94,6 +106,7 @@ Start with the header in `_includes/header.html`:
   <link rel="stylesheet" href="/css/style.css">
 </head>
 ```
+
 Add a navbar in `_includes/navbar.html`:
 ```html
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
