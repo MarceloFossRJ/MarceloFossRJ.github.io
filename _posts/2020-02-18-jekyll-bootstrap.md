@@ -4,7 +4,7 @@ title:  "Creating a Jekyll Bootstrap Template"
 date:   2020-02-18 18:44:25 -0300
 categories: [article]
 tags: [ruby, jekyll, Bootstrap]
-author: Daniel Sieger
+author: Marcelo Foss
 ---
 This is an useful article originally published by Daniel Sieger at [danielsieger.com/CreatingAJekyllBootstrapTemplate](https://www.danielsieger.com/blog/2019/01/12/creating-jekyll-bootstrap-template.html)
 
