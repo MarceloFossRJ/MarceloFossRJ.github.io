@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "H to mount an EXT partition on a Mac"
+title:  "How to mount an EXT partition on a Mac"
 date:   2020-03-11 18:44:25 -0300
 categories: [recipe]
 tags: [MacOS, macos-x, Linux ]
