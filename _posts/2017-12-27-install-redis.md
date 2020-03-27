@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Install Redis on macOS
+title: Install Redis on MacOS
 date:   2017-12-27 18:44:25 -0300
 category: [recipe]
 tags: [recipe, redis, cache, ]
