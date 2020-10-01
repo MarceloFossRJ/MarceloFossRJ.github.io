@@ -324,11 +324,21 @@ a.post-link:hover{
 
 .post-content {
   margin-bottom: $spacing-unit/10;
+  h1 {
+      font-weight: $base-font-weight;
+      @include relative-font-size(2.0);
+      @include media-query($on-laptop) {
+        @include relative-font-size(1.7);
+      }
+      @include media-query($on-palm) {
+        @include relative-font-size(1.6);
+      }
+  }
 
   h2 {
       font-family: $header-font-family;
       font-weight: $base-font-weight;
-      @include relative-font-size(1.6);
+      @include relative-font-size(1.7);
       @include media-query($on-laptop) {
         @include relative-font-size(1.5);
       }
@@ -351,7 +361,7 @@ a.post-link:hover{
 
   h4 {
       font-weight: $base-font-weight;
-      @include relative-font-size(1.2);
+      @include relative-font-size(1.1);
       @include media-query($on-laptop) {
         @include relative-font-size(1.1);
       }
