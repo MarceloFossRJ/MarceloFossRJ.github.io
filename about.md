@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 # MarceloFossRJ 
-My name is Marcelo Foss, you will find me in the web with the nickname marcelo.foss.rj or marcelofossrj or marcelofoss.
+My name is Marcelo Foss, you will find me in the web with the nickname marcelo.foss.rj or marcelofossrj.
 
 At the university I received a chemical engineer diploma, but my professional career evolved in IT. I have been working in the software development and ICT management as well as the process optimization arena for over 20 years. Over this time, I was able to help many companies in various industries: finance, publishing, consumers, health insurance, retail, food/beverages and education.
 
@@ -16,7 +16,6 @@ Professionally, my focus is creating, building, accomplishment of projects, prod
 My background includes experience in software and product development, business and functional analysis, developing corporate ICT strategy, budget management, system architecture, project management, and team leadership (where I could lead local and distributed teams in Brazil, Belgium, Portugal and India).
 
 I do also still enjoy developing enterprise class software, and the processes that support its development. Lately I am focusing mostly in SEO, business automation, IoT, and the [chilipepper.app](https://chilipepper.app).
-
 
 If you want to contact me you can find me over LinkedIn at [in/marcelofoss](https://linkedin.com/in/marcelofoss).
 
